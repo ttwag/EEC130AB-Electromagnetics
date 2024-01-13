@@ -98,7 +98,7 @@ $$
 \end{align}
 $$
 
-###
+### Phasor Domain and the Helmholtz Equation
 The results from KVL and KCL could be transformed into the phasor domain.
 
 $$\frac{d\vec{V}}{dz} = -R'\vec{I} - j\omega L' \vec{I}$$
