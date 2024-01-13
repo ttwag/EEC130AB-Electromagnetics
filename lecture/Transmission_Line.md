@@ -58,16 +58,14 @@ Moreover, these $\Delta z$ won't just be wire. They are **coaxial cable** with r
 ![Figure4](../image/Figure4.png)
 
 ### KVL
-$$
 
+$$
 \begin{align}
 & v(z+\Delta, t) = v(z, t) + v' \\
 & \implies v(z, t) - i(z, t)R - L\frac{di(z, t)}{dt} \\
 & \implies v(z + \Delta z, t) - v(z,t) = -R'\Delta z \space i(z, t) - L' \Delta z \frac{di(z, t)}{dt} \\ 
 & \implies \frac{v(z + \Delta z, t)}{\Delta z} = -R' \space i(z,t) - L' \frac{di(z, t)}{dt} \\
 & \implies \frac{\partial v(z, t)}{\partial z} = -R' \space i(z, t) - L'\frac{\partial i(z, t)}{\partial t}
-
-
 \end{align}
 $$
 
