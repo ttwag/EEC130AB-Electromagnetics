@@ -55,6 +55,18 @@ To analyze this big distributed circuit, we could partition the wire into small 
 
 Moreover, these $\Delta z$ won't just be wire. They are **coaxial cable** with resistance, inductance, and capacitance, so we need an accurate circuit to model it.
 
+$$
+\begin{align}
+R' : resistance/length, \frac{Ω}{m} \\
+
+L' : inductance / length, \frac{H}{m} \\
+
+G' : conductance / length \frac{S}{m} \\
+
+C' : capacitance / length \frac{F}{m} \\
+\end{align}
+$$
+
 ![Figure4](../image/Figure4.png)
 
 ### KVL
@@ -85,3 +97,27 @@ $$
 & \implies \frac{\partial i(z, t)}{\partial z} = -G' \space v(z, t) - C' \frac{dv(z, t)}{dt} \\
 \end{align}
 $$
+
+###
+The results from KVL and KCL could be transformed into the phasor domain.
+
+$$\frac{d\vec{V}}{dz} = -R'\vec{I} - j\omega L' \vec{I}$$
+$$\frac{d\vec{I}}{dz} = -G' \vec{V} - j\omega C' \vec{V}$$
+
+However, we will assume the transmission line is **lossless**, meaning that $R'$ and $G' = 0$ and no energy is lossed during the transmission Thus, the phasor domain equations become:
+
+$$\frac{d\vec{V}}{dz} = - j\omega L' \vec{I}$$
+$$\frac{d\vec{I}}{dz} = - j\omega C' \vec{V}$$
+
+If we manipulate the equations slightly, we'll find:
+
+$$
+\begin{align}
+& \frac{d^2\vec{V}}{dz^2} = - j\omega L' \frac{d\vec{I}}{dz} \\
+& \implies \frac{d^2\vec{V}}{dz^2} = (-j\omega L') (-j\omega C') \vec{V} \\
+& \implies \frac{d^2\vec{V}}{dz^2} = -\omega ^ 2 L' C' \vec{V} \\
+\end{align}
+$$
+
+This arives at the **Helmholtz Equation**, where
+$$\frac{d^2\vec{V}}{dz^2} + \beta^2 \vec{V} = 0$$ 
