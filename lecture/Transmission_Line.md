@@ -134,11 +134,13 @@ $$
 The results from KVL and KCL could be transformed into the phasor domain.
 
 $$\frac{d\vec{V}}{dz} = -R'\vec{I} - j\omega L' \vec{I}$$
+
 $$\frac{d\vec{I}}{dz} = -G' \vec{V} - j\omega C' \vec{V}$$
 
 However, we will assume the transmission line is **lossless**, meaning that $R'$ and $G' = 0$ and no energy is lossed during the transmission Thus, the phasor domain equations become:
 
 $$\frac{d\vec{V}}{dz} = - j\omega L' \vec{I}$$
+
 $$\frac{d\vec{I}}{dz} = - j\omega C' \vec{V}$$
 
 If we manipulate the equations slightly, we'll find:
