@@ -70,4 +70,12 @@ $$
 $$
 
 
+
 ### KCL
+
+$$
+\begin{align}
+& i(z, t) = i(z+\Delta z, t) + i' \\
+\implies 
+\end{align}
+$$
