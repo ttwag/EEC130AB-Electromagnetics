@@ -40,14 +40,46 @@ $$
 , where $v_p$ is the phase velocity.
 
 ## Luped-Element Circuit Model
-When to use it?
+The Lumped-Element Circuit Model is not realistic as it assumes all observable electrical quantities changes instantaneously with the input.
+For example, if you apply a sinusoidal input into the circuit, $V_A$ will reflect that immediately without delay.
+
+So when to use it?
+
 ![Figure2](../image/Figure2.png)
 
 If $\frac{l}{\lambda} < \frac{1}{100}$, we can use the lumped-element model.
 
+That's because the input voltage wave in the circuit can be modeled by the equation, 
+$$v_g(t) = v_0cos(\omega t)$$
+
+If there's delay, $t_d$, at the output, $v_A(t)$,
+
+$$
+v_A(t) = v_0cos(\omega (t - t_d)) \\
+= v_0cos(\omega t - \omega t_d) \\
+$$
+
+As discussed in the wave basics, the time delay is the time it takes for the wave to travel to the location, 
+$$
+t_d = \frac{l}{v_p}, \\
+= \frac{l}{\lambda f} \\
+$$
+
+Now, 
+$$
+\omega t_d = 2\pi (\frac{l}{\lambda})
+$$
+
+Thus, if $\frac{l}{\lambda}$ is too small, the phase difference is small, so we don't need to account it and can use the usual circuit analysis technique. Vice versa.
+
+We seee that we need to account for the phase shift if:
+* $l$ is very large.
+* $v_g(t)$ has a high frequency.
+
+
 ## Distributed Circuit
 
-We need to account for spatial variation if $\frac{l}{\lambda} \geq \frac{1}{100}$
+We need to account for spatial variation (Cannot use circuit 1's analysis) if $\frac{l}{\lambda} \geq \frac{1}{100}$
 
 ![Figure3](../image/Figure3.png)
 
