@@ -62,9 +62,11 @@ Moreover, these $\Delta z$ won't just be wire. They are **coaxial cable** with r
 $$
 \begin{align}
 & v(z+\Delta, t) = v(z, t) + v' \\
-& \implies v(z, t) - i(z, t)R - L\frac{di(z, t)}{dt} \\
+& = v(z, t) - i(z, t)R - L\frac{di(z, t)}{dt} \\
 & \implies v(z + \Delta z, t) - v(z,t) = -R'\Delta z \space i(z, t) - L' \Delta z \frac{di(z, t)}{dt} \\ 
 & \implies \frac{v(z + \Delta z, t)}{\Delta z} = -R' \space i(z,t) - L' \frac{di(z, t)}{dt} \\
+\\
+& \lim_{\Delta z \to 0}\frac{v(z + \Delta z, t)}{\Delta z} = -R' \space i(z,t) - L' \frac{di(z, t)}{dt} \\
 & \implies \frac{\partial v(z, t)}{\partial z} = -R' \space i(z, t) - L'\frac{\partial i(z, t)}{\partial t}
 \end{align}
 $$
@@ -76,6 +78,10 @@ $$
 $$
 \begin{align}
 & i(z, t) = i(z+\Delta z, t) + i' \\
-\implies 
+& = i(z + \Delta z, t) + G'\Delta z \space v(z + \Delta z, t) + C'\Delta z \frac{d v(z + \Delta z, t)}{d t} \\
+& = \frac{i(z + \Delta z) - i(z, t)}{\Delta z} = -G' \space v(z + \Delta z, t) - C' \frac{dv(z + \Delta z, t)}{dt} \\
+\\
+& \lim_{\Delta z \to 0} \frac{i(z + \Delta z) - i(z, t)}{\Delta z} = -G' \space v(z + \Delta z, t) - C' \frac{dv(z + \Delta z, t)}{dt} \\
+& \implies \frac{\partial i(z, t)}{\partial z} = -G' \space v(z, t) - C' \frac{dv(z, t)}{dt} \\
 \end{align}
 $$
