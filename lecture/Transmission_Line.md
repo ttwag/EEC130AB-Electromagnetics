@@ -37,9 +37,10 @@ $$
 \Delta x = \frac{\omega}{\beta}\Delta t \\
 v_p = \frac{\Delta x}{\Delta t} = \frac{\omega}{\beta} = \lambda f
 $$
+
 , where $v_p$ is the phase velocity.
 
-## Luped-Element Circuit Model
+## Lumped-Element Circuit Model
 The Lumped-Element Circuit Model is not realistic as it assumes all observable electrical quantities changes instantaneously with the input.
 For example, if you apply a sinusoidal input into the circuit, $V_A$ will reflect that immediately without delay.
 
@@ -65,7 +66,8 @@ t_d = \frac{l}{v_p}, \\
 = \frac{l}{\lambda f} \\
 $$
 
-Now, 
+Now,
+
 $$
 \omega t_d = 2\pi (\frac{l}{\lambda})
 $$
@@ -89,15 +91,13 @@ Moreover, these $\Delta z$ won't just be wire. They are **coaxial cable** with r
 
 $$
 \begin{align}
-R' : resistance/length, \frac{Ω}{m} \\
-
+R' : resistance / length, \frac{\Omega}{m} \\
 L' : inductance / length, \frac{H}{m} \\
-
-G' : conductance / length \frac{S}{m} \\
-
-C' : capacitance / length \frac{F}{m} \\
+G' : conductance / length, \frac{S}{m} \\
+C' : capacitance / length, \frac{F}{m}
 \end{align}
 $$
+
 
 ![Figure4](../image/Figure4.png)
 
