@@ -111,7 +111,7 @@ $$
 & \implies \frac{v(z + \Delta z, t)}{\Delta z} = -R' \space i(z,t) - L' \frac{di(z, t)}{dt} \\
 \\
 & \lim_{\Delta z \to 0}\frac{v(z + \Delta z, t)}{\Delta z} = -R' \space i(z,t) - L' \frac{di(z, t)}{dt} \\
-& \implies \frac{\partial v(z, t)}{\partial z} = -R' \space i(z, t) - L'\frac{\partial i(z, t)}{\partial t}
+& \implies \frac{\partial v(z, t)}{\partial z} = -R' \space i(z, t) - L'\frac{d i(z, t)}{d t}
 \end{align}
 $$
 
@@ -153,5 +153,82 @@ $$
 \end{align}
 $$
 
-This arives at the **Helmholtz Equation**, where
+This arrives at the **Helmholtz Equation (Telegrapher's Equation)**, where
 $$\frac{d^2\vec{V}}{dz^2} + \beta^2 \vec{V} = 0$$ 
+
+$$\frac{d^2\vec{I}}{dz^2} + \beta ^2\vec{I} = 0$$
+
+and $\beta = \omega^2 L' C'$
+
+**Solution**
+* $\vec{V}_+(z) = V_0^+ e^{-j\beta z}$
+* $\vec{V}_-(z) = V_0^- e^{j\beta z}$
+
+In general:
+$$\vec{V}(z) = V_0^+ e^{-j\beta z} + V_0^- e^{j\beta z}$$
+
+**Physical Meaning of the Solution**
+
+First transform the solutions into time domain, which is:
+
+$$v(z, t) = I_0^+ cos(\omega t - \beta z) + V_0^-cos(\omega t + \beta z)$$
+$$i(z, t) = I_0^+ cos(\omega t - \beta z) + I_0^-cos(\omega t + \beta z)$$
+
+This represents a traveling wave going to +z and -z direction with amplitude of $V_0^+$ and $V_0^-$.
+
+These equations should apply to the part of transmission line between sender and load, and it means that voltage varies between transmission line. 
+
+Also, $\beta = \omega \sqrt{L'C'}$, so the phase velocity of the waves are $v_p = \frac{\omega}{\beta} = \frac{1}{\sqrt{L'C'}}$.
+
+### Characteristic Impedance $(Z_0)$
+
+Could the $V_0^+$ and $I_0^+$ be related and same for the reflected wave?
+
+We know
+
+$$\frac{d\vec{V}}{dz} = - j\omega L' \vec{I}$$ 
+
+If we plug in $\vec{V}$ and $\vec{I}$, 
+$$\frac{d}{dz}(V_0^+ e^{-j\beta z} + V_0^- e^{j\beta z}) = -j\omega L' (I_0^+ e^{-j\beta z} + I_0^- e^{j\beta z})$$
+$$ \implies V_0^+ = \sqrt{\frac{L'}{C'}}I_0^+$$
+
+If we do the same for the backward traveling wave, we will get
+$$V_0^- = -\sqrt{\frac{L'}{C'}}I_0^-$$
+
+**Characteristic Impedance**
+
+$$Z_0 = \sqrt{\frac{L'}{C'}}$$
+
+It means that if we have current wave, we always have voltage wave related with the constant.
+Moreover, the reverse current wave has a negative sign, signaling the current's direction is flipped.
+
+### Reflection Coefficient
+Are $V_0^+$ and $V_0^-$ related?
+
+YES! They are related by $\gamma$, the reflection coefficient.
+
+$\gamma = \frac{V_0^-}{V_0^+}$
+
+We can find $\gamma$ by applying the boundary conditions about the load, which is $\vec{V}_L = Z_L \vec{I}_L$.
+
+If we set the load at position $z = 0$,
+
+we get
+
+$$\vec{V}_L = Z_L \vec{I}_L$$
+$$\implies \vec{V}(z = 0) = Z_L \vec{I}(Z = 0)$$
+$$\implies \gamma = \frac{Z_L - Z_0}{Z_L + Z_0}$$
+
+**Note:**
+* If $Z_L == Z_0$, then $\gamma$ is 0. The wave perfectly transmitts.
+* If $Z_L == \infty$, then $\gamma$ is 1. The wave reflects with the same amplitude.
+* If $Z_L == 0$, then $\gamma$ is -1. The wave reflects with opposite amplitude.
+
+### Transmission Coefficient
+
+
+**USE LECTURE IMAGE!!!**
+
+
+
+
