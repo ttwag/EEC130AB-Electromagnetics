@@ -216,18 +216,23 @@ If we set the load at position $z = 0$,
 we get
 
 $$\vec{V}_L = Z_L \vec{I}_L$$
+
 $$\implies \vec{V}(z = 0) = Z_L \vec{I}(Z = 0)$$
+
 $$\implies \gamma = \frac{Z_L - Z_0}{Z_L + Z_0}$$
 
 **Note:**
-* If $Z_L == Z_0$, then $\gamma$ is 0. The wave perfectly transmitts.
+* If $Z_L == Z_0$, then $\gamma$ is 0. The wave perfectly transmits.
 * If $Z_L == \infty$, then $\gamma$ is 1. The wave reflects with the same amplitude.
 * If $Z_L == 0$, then $\gamma$ is -1. The wave reflects with opposite amplitude.
 
+
+![Figure5](../image/Figure5.png)
+
+
 ### Transmission Coefficient
 
-
-**USE LECTURE IMAGE!!!**
+$\tau = \frac{V_1^+}{V_0^+}$
 
 
 
