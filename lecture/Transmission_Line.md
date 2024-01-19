@@ -189,7 +189,9 @@ We know
 $$\frac{d\vec{V}}{dz} = - j\omega L' \vec{I}$$ 
 
 If we plug in $\vec{V}$ and $\vec{I}$, 
+
 $$\frac{d}{dz}(V_0^+ e^{-j\beta z} + V_0^- e^{j\beta z}) = -j\omega L' (I_0^+ e^{-j\beta z} + I_0^- e^{j\beta z})$$
+
 $$ \implies V_0^+ = \sqrt{\frac{L'}{C'}}I_0^+$$
 
 If we do the same for the backward traveling wave, we will get
