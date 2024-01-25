@@ -169,14 +169,14 @@ $$\vec{V}(z) = V_0^+ e^{-j\beta z} + V_0^- e^{j\beta z}$$
 
 **Physical Meaning of the Solution**
 
-First transform the solutions into time domain, which is:
+First transform the solutions into the time domain, which is:
 
 $$v(z, t) = I_0^+ cos(\omega t - \beta z) + V_0^-cos(\omega t + \beta z)$$
 $$i(z, t) = I_0^+ cos(\omega t - \beta z) + I_0^-cos(\omega t + \beta z)$$
 
 This represents a traveling wave going to +z and -z direction with amplitude of $V_0^+$ and $V_0^-$.
 
-These equations should apply to the part of transmission line between sender and load, and it means that voltage varies between transmission line. 
+These equations should apply to the part of the transmission line between sender and load, and it means that voltage varies between transmission lines. 
 
 Also, $\beta = \omega \sqrt{L'C'}$, so the phase velocity of the waves are $v_p = \frac{\omega}{\beta} = \frac{1}{\sqrt{L'C'}}$.
 
@@ -201,7 +201,7 @@ $$V_0^- = -\sqrt{\frac{L'}{C'}}I_0^-$$
 
 $$Z_0 = \sqrt{\frac{L'}{C'}}$$
 
-It means that if we have current wave, we always have voltage wave related with the constant.
+It means that if we have a current wave, we always have a voltage wave related to the constant.
 Moreover, the reverse current wave has a negative sign, signaling the current's direction is flipped.
 
 ### Reflection Coefficient
@@ -236,6 +236,88 @@ $$\implies \gamma = \frac{Z_L - Z_0}{Z_L + Z_0}$$
 
 $\tau = \frac{V_1^+}{V_0^+}$
 
+### Standing Wave
+
+**Refletion on a Trasmission Line**
+
+Consider a rightward traveling wave:
+$\vec{V}(z) = V_0^+ e^{-j\beta z} \implies V(z, t) = Re\{|V_0^+| e^{j(\omega t-\beta z + \phi_t)}\} = V_0^+ cost(\omega t-\beta z + \phi_t)$
+
+Consider a rightward traveling wave and a reflected wave ($\gamma = 1$)
+
+$\vec{V}(z) = V_0^+ e^{-j\beta z} + V_0^- e^{j\beta z} = V_0^+(e^{-j\beta z} + e^{j\beta z}) = 2V_0^+cos(\beta z) \implies V(z, t) = Re\{ \vec{V}(z)\} = Re\{ 2|V_0^+|cos(\beta z) e^{j\omega t}e^{\phi_t}\} = 2|V_0^+| cos(\beta z)cost(\omega t + \phi_t)$
+
+In general, 
+
+$|V(z)| = |V_0^+|[(1 + |\gamma|^2 + 2|r|cos(2\beta z + \theta_r))]^{1/2}$
+
+The first two terms of the amplitude correspond to the amplitude of the forward and backward wave, and the cosine term represents the interference.
+
+**Destructive Interference**
+
+When the cosine term is -1, 
+
+$|V(z)| = |V_0^+| - |V_0^-|$
+
+**Constructive Interference**
+
+When the cosine term is 1,
+
+$|V(z)| = |V_0^+| + |V_0^-|$
+
+The amplitude varies with z (location).
+
+**Standing Wave Ratio**
+
+$S = \frac{1 + |\gamma|}{1 - |\gamma|} = \frac{maxima}{minima}$, quantifies how much standing wave we have.
+
+$Period = \frac{\lambda}{2}$
+
+$d_{max} = \frac{n \lambda}{2}$
+
+**Special Cases**
+* Matched ($\gamma = 0$): no backward wave, no interference, no standing wave.
+* Short ($\gamma = -1$): the backward wave has equal amplitude to that of the forward traveling wave.
+* Open ($\gamma = 1$): the backward wave has equal amplitude to that of the forward traveling wave.
+
+### Power
+
+**Average Power** 
+
+$P_{avg} = \frac{1}{2}Re\{\vec{I}\vec{V}\}$
+
+
+Suppose we have the following voltage and current waves on the transmission line:
+
+$\vec{V}(z) = V_0^+ (e^{-j\beta z} + \gamma e^{j\beta z})$
+
+$\vec{I}(z) = \frac{V_0^+}{Z_0} (e^{-j\beta z} - \gamma e^{j\beta z})$
+
+If we plug the voltage and current phasors into the average power equation, we get:
+
+$P_{avg} = \frac{1}{2} Re \{\frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)\} = \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)$ 
+
+The first term represents the power carried by the incident wave, and the second term is the power carried by the reflected wave. 
+
+
+Power is largest when $|\gamma| = 0$.
+There's no power transmitting when $|\gamma| = 1$
+
+### Wave Impedance $\gamma (d)$
+
+We could turn the transmission line into a simple lumped impedance.
+
+The second transmission line has characteristic impedance, $Z_1$
+
+$z(d) = \frac{\vec{V}(z = d)}{\vec{I}(z = d)} = \frac{V_0^+ (e^{-j\beta z} + \gamma e^{j\beta z})}{\frac{V_0^+}{Z_1} (e^{-j\beta z} - \gamma e^{j\beta z})} = Z_1 (\frac{1+\gamma e^{-2j\beta d}}{1 - \gamma e^{-2j\beta d}})$
+
+
+$z(d) = Z_1 (\frac{Z_L + jZ_1 tan(\beta d)}{Z_1 + jZ_Ltan(\beta d)})$
+
+
+**Short Circuit Impedance**
+
+A transmission line could behave as an inductor or capacitor.
 
 
 
