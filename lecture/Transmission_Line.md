@@ -309,15 +309,38 @@ We could turn the transmission line into a simple lumped impedance.
 
 The second transmission line has characteristic impedance, $Z_1$
 
+d is the length of the transmission line.
+
 $z(d) = \frac{\vec{V}(z = d)}{\vec{I}(z = d)} = \frac{V_0^+ (e^{-j\beta z} + \gamma e^{j\beta z})}{\frac{V_0^+}{Z_1} (e^{-j\beta z} - \gamma e^{j\beta z})} = Z_1 (\frac{1+\gamma e^{-2j\beta d}}{1 - \gamma e^{-2j\beta d}})$
 
 
 $z(d) = Z_1 (\frac{Z_L + jZ_1 tan(\beta d)}{Z_1 + jZ_Ltan(\beta d)})$
 
 
-**Short Circuit Impedance**
+**Inductive and Capacitive Impedance**
 
-A transmission line could behave as an inductor or capacitor.
+A transmission line could behave as an inductor or capacitor depending on the lumped impedance it has.
 
 
+## Smith Chart
+* Graphical tool to relate $Z_0, \gamma, Z_L$.
 
+* Normalize load impedance: $\gamma = \frac{Z_L' - 1}{Z_L' + 1}$, where $Z_L' = \frac{Z_L}{Z_0} = \frac{1 + \gamma}{1 - \gamma}$
+
+We can put the normalized load impedance as a complex impedance
+$$Z_L' = r_L + jx_L = \frac{1-\gamma_r ^ 2 - \gamma_i ^2 + 2j\gamma_i}{(1-\gamma_r)^2+ \gamma_i ^ 2}$$
+
+**Real Part**
+
+Eventually, we arrive at: $(\gamma_r - \frac{r_L}{1 + r_L})^2 + \gamma_i ^ 2 = (\frac{1}{1 + r_L})^2$
+
+As $r_L$ increases, the circle shifts right and the radius decreases.
+
+**Imaginary Part**
+
+$x_L = \frac{2\gamma_i}{(1-\gamma_r)^2 + \gamma_i}$
+
+$(\gamma_r - 1)^2 + (\gamma_i - \frac{1}{x_L})^2 = (\frac{1}{x_L})^2$
+
+
+1 full rotation is $\frac{\lambda}{2}$
