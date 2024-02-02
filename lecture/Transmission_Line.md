@@ -131,7 +131,7 @@ $$
 $$
 
 ### Phasor Domain and the Helmholtz Equation
-The results from KVL and KCL could be transformed into the phasor domain.
+The results from KVL and KCL could be transformed into the phasor domain since $v(z,t)$ and $i(z, t)$ have periodic dependence on time.
 
 $$\frac{d\vec{V}}{dz} = -R'\vec{I} - j\omega L' \vec{I}$$
 
@@ -240,18 +240,15 @@ $\tau = \frac{V_1^+}{V_0^+}$
 
 **Refletion on a Trasmission Line**
 
-Consider a rightward traveling wave:
-$\vec{V}(z) = V_0^+ e^{-j\beta z} \implies V(z, t) = Re\{|V_0^+| e^{j(\omega t-\beta z + \phi_t)}\} = V_0^+ cost(\omega t-\beta z + \phi_t)$
+If we manipulate the forward and backward traveling voltage wave, we'll find that:
 
-Consider a rightward traveling wave and a reflected wave ($\gamma = 1$)
+$|V(d)| = |V_0^+|[(1 + |\gamma|^2 + 2|\gamma|cos(2\beta d + \theta_{\gamma}))]^{1/2}$
 
-$\vec{V}(z) = V_0^+ e^{-j\beta z} + V_0^- e^{j\beta z} = V_0^+(e^{-j\beta z} + e^{j\beta z}) = 2V_0^+cos(\beta z) \implies V(z, t) = Re\{ \vec{V}(z)\} = Re\{ 2|V_0^+|cos(\beta z) e^{j\omega t}e^{\phi_t}\} = 2|V_0^+| cos(\beta z)cost(\omega t + \phi_t)$
-
-In general, 
-
-$|V(z)| = |V_0^+|[(1 + |\gamma|^2 + 2|r|cos(2\beta z + \theta_r))]^{1/2}$
+, where d represents the distance from the load to the generator.
+**The amplitude varies with z (location).**
 
 The first two terms of the amplitude correspond to the amplitude of the forward and backward wave, and the cosine term represents the interference.
+
 
 **Destructive Interference**
 
@@ -265,15 +262,14 @@ When the cosine term is 1,
 
 $|V(z)| = |V_0^+| + |V_0^-|$
 
-The amplitude varies with z (location).
 
 **Standing Wave Ratio**
 
 $S = \frac{1 + |\gamma|}{1 - |\gamma|} = \frac{maxima}{minima}$, quantifies how much standing wave we have.
 
-$Period = \frac{\lambda}{2}$
+Period of the standing wave $= \frac{\lambda}{2}$
 
-$d_{max} = \frac{n \lambda}{2}$
+$d_{max} = \frac{n \lambda}{2} + \theta{\gamma} \frac{\lambda}{4 \pi}$
 
 **Special Cases**
 * Matched ($\gamma = 0$): no backward wave, no interference, no standing wave.
@@ -284,7 +280,7 @@ $d_{max} = \frac{n \lambda}{2}$
 
 **Average Power** 
 
-$P_{avg} = \frac{1}{2}Re\{\vec{I}\vec{V}\}$
+$P_{avg} = \frac{1}{2}Re\{\vec{I}\vec{V}\} = \frac{1}{2} Re\{Z_{in}\} |\vec{I}|^2$
 
 
 Suppose we have the following voltage and current waves on the transmission line:
@@ -322,25 +318,97 @@ $z(d) = Z_1 (\frac{Z_L + jZ_1 tan(\beta d)}{Z_1 + jZ_Ltan(\beta d)})$
 A transmission line could behave as an inductor or capacitor depending on the lumped impedance it has.
 
 
-## Smith Chart
+### Smith Chart
 * Graphical tool to relate $Z_0, \gamma, Z_L$.
 
-* Normalize load impedance: $\gamma = \frac{Z_L' - 1}{Z_L' + 1}$, where $Z_L' = \frac{Z_L}{Z_0} = \frac{1 + \gamma}{1 - \gamma}$
+* Based on Normalize load impedance: $\gamma = \frac{\bar{Z}_L - 1}{\bar{Z}_L + 1}$
+
+
+* $\gamma_{real}$ is the horizontal axis, and $\gamma_{imaginary}$ is the vertical axis.
+
+* The group of circles lying on the horizontal axis is the real part of the $\bar{Z}_L$, and the top and bottom curves represent its imaginary part.
+
+
+* The chart is bounded by $|\gamma| = 1$, which means $|\gamma| < 1 $ in the smith chart. This is because the transmission line cannot reflect more than it sends in.
+
+* A matched load should have a reflection coefficient at the center so that $\bar{Z}_L = 1$, thus $\gamma = \bar{Z}_L - 1 = 0$.
+
+* Rotating a point **clockwise** in the Smith Chart corresponds to extending the transmission line **from the load to the generator**.
+
+* Rotation by 180 degrees around the origin turns impedance to admittance.
+
+
+**Equations of the Circles in Smith Chart**
 
 We can put the normalized load impedance as a complex impedance
 $$Z_L' = r_L + jx_L = \frac{1-\gamma_r ^ 2 - \gamma_i ^2 + 2j\gamma_i}{(1-\gamma_r)^2+ \gamma_i ^ 2}$$
 
-**Real Part**
+$$r_L = \frac{1 - \gamma^2 _r - \gamma^2 _i}{(1-\gamma_r)^2+ \gamma_i ^ 2}$$
 
-Eventually, we arrive at: $(\gamma_r - \frac{r_L}{1 + r_L})^2 + \gamma_i ^ 2 = (\frac{1}{1 + r_L})^2$
+$$x_L = \frac{2\gamma_i}{(1-\gamma_r)^2+ \gamma_i ^ 2}$$
+
+**Real Part Circles**
+
+After manipulating $r_L$, we arrive at: 
+
+$$(\gamma_r - \frac{r_L}{1 + r_L})^2 + \gamma_i ^ 2 = (\frac{1}{1 + r_L})^2$$
 
 As $r_L$ increases, the circle shifts right and the radius decreases.
 
-**Imaginary Part**
+**Imaginary Part Circles**
 
-$x_L = \frac{2\gamma_i}{(1-\gamma_r)^2 + \gamma_i}$
+After manipulating $r_L$, we get: 
 
-$(\gamma_r - 1)^2 + (\gamma_i - \frac{1}{x_L})^2 = (\frac{1}{x_L})^2$
+$$(\gamma_r - 1)^2 + (\gamma_i - \frac{1}{x_L})^2 = (\frac{1}{x_L})^2$$
 
+**Why Rotation Corresponds to Extending the Transmission Line?**
 
-1 full rotation is $\frac{\lambda}{2}$
+Recall that $$Z_L = \frac{Z_L - Z_0}{Z_L + Z_0} \implies Z_L = Z_0 \left( \frac{1 + \gamma}{1 - \gamma} \right)$$, with $Z_L$ as the load impedance and $Z_0$ as the characteristic impedance.
+
+On a transmission line with $d = 0$ located at the load, it can be shown that the input impedance at any point l to the left of the load is 
+
+$$Z(d) = \frac{\vec{V}(-d)}{\vec{I}(-d)} = Z_0 \left( \frac{1 + \gamma e^{-2j \beta d}}{1 - \gamma e^{-2 j \beta d}} \right)$$
+
+We observe that when $d = 0$, $Z(d)$ is precisely $Z_L$. As we move to a larger d (traveling from load to generator), $\gamma$ is multiplied by a phase $e^{-2j\beta d}$.
+
+*Therefore, traveling from load to generator will result in *clockwise* rotation in the Smith Chart since the coordinate of the Smith Chart is based on $\gamma$*
+
+**Lumped Element Impedance Matching**
+
+We will design networks to match $Z_L$ to $Z_0$ to maximize power transmission.
+
+We want $Z_{in} = R_{in} + j X_{in} = Z_0$
+
+Objective of matching: $\bar{Z}_{in} = 1 + j 0$
+
+which is also $\bar{Y}_{in} = \frac{1}{\bar{Z}_{in}}$
+
+Recall that we can add admittances, $\bar{Y}_{in} = \bar{g}_{in} + j \bar{b}_{in}$, when elements are in parallel.
+
+**Steps**
+
+**Objective of matching:** $\bar{Z}_{in}(d) = 1 + j 0$
+
+Note: Be aware of normalized and unnormalized quantities. 
+
+$Y_{in} = \frac{Z_0}{\bar{Z}_{in}} = \frac{Z_0}{\bar{Y}_{in}}$
+
+|Steps|Instruction|Explanation|
+|----:|-----------|-----------|
+|1|Plot $\bar{Z}_L$ and convert to $\bar{Y}_L$| We are adding an element in parallel, effectively adding admittance of the element and the transmission line after it.
+|2|Adjust the element position (rotate through Smith Chart) so that $\bar{Y}_L(d) = 1 + j B_{in}$. Rotate until we are at the $\bar{g}_{L} = 1$ circle.|Rotation corresponds to adding length, d, between the element and the load. We want a length such that $\bar{Y}_L(d) = 1 + jB_{in}$
+|3|Choose the value of the element, $X$, to eliminate $j B_{in}$. Read off $\bar{B}_{in}$ value and choose the appropriate element and value to cancel it. | $\bar{Y}_{in} = \bar{Y}_{Element} + \bar{Y}_L = jX + (1 + jB_{in}) = 1$ 
+
+**Single-Stub Matching**
+
+Adding a capacitor or inductor in parallel may not always be feasible.
+
+However, we've learned that a short-circuit transmission line could have a complex impedance.
+
+![Figure6](../image/Figure6.png)
+
+|Steps|Instruction|Explanation|
+|----:|-----------|-----------|
+|1| Follow the lumped element matching step 1 to 2 | We want to know the value of $B_{in}$ that the short-circuit line needs to cancel.
+|2| Find the point with $-B_{in}$, and lies on the $g_L = 0$ circle | We want the short-circuit stub to have the negative of the $B_{in}$, so the imaginary parts cancel when placed in parallel.
+|3| Start from the short circuit admittance position (1 + j0) and move the line to the line found in step 2. Calculate the length difference in terms of $\lambda$. This would be the **stub length**. | We found how long the stub needs to have an imaginary impedance that cancels that of the transmission line on the right. Remember, the short circuit line has no real impedance/admittance, so we just need to move it to the $-B_{in}$
