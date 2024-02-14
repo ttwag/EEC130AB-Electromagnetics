@@ -26,7 +26,7 @@ y(x, t) = Acos(\omega t - \beta x + \phi)\\
 = Acos(-\beta(x - \frac{\omega}{\beta}t))\\
 $$
 
-![Figure1](../image/Figure1.png)
+![Figure1](./image/Figure1.png)
 
 ### Phase Velocity
 Since the wave function is right shifted x unit by $\frac{\omega}{\beta}t$ 
@@ -46,7 +46,7 @@ For example, if you apply a sinusoidal input into the circuit, $V_A$ will reflec
 
 So when to use it?
 
-![Figure2](../image/Figure2.png)
+![Figure2](./image/Figure2.png)
 
 If $\frac{l}{\lambda} < \frac{1}{100}$, we can use the lumped-element model.
 
@@ -83,7 +83,7 @@ We seee that we need to account for the phase shift if:
 
 We need to account for spatial variation (Cannot use circuit 1's analysis) if $\frac{l}{\lambda} \geq \frac{1}{100}$
 
-![Figure3](../image/Figure3.png)
+![Figure3](./image/Figure3.png)
 
 To analyze this big distributed circuit, we could partition the wire into small chunks, $\Delta z$.
 
@@ -99,7 +99,7 @@ C' : capacitance / length, \frac{F}{m}
 $$
 
 
-![Figure4](../image/Figure4.png)
+![Figure4](./image/Figure4.png)
 
 ### KVL
 
@@ -229,7 +229,7 @@ $$\implies \gamma = \frac{Z_L - Z_0}{Z_L + Z_0}$$
 * If $Z_L == 0$, then $\gamma$ is -1. The wave reflects with opposite amplitude.
 
 
-![Figure5](../image/Figure5.png)
+![Figure5](./image/Figure5.png)
 
 
 ### Transmission Coefficient
@@ -405,10 +405,15 @@ Adding a capacitor or inductor in parallel may not always be feasible.
 
 However, we've learned that a short-circuit transmission line could have a complex impedance.
 
-![Figure6](../image/Figure6.png)
+![Figure6](./image/Figure6.png)
 
 |Steps|Instruction|Explanation|
 |----:|-----------|-----------|
 |1| Follow the lumped element matching step 1 to 2 | We want to know the value of $B_{in}$ that the short-circuit line needs to cancel.
 |2| Find the point with $-B_{in}$, and lies on the $g_L = 0$ circle | We want the short-circuit stub to have the negative of the $B_{in}$, so the imaginary parts cancel when placed in parallel.
 |3| Start from the short circuit admittance position (1 + j0) and move the line to the line found in step 2. Calculate the length difference in terms of $\lambda$. This would be the **stub length**. | We found how long the stub needs to have an imaginary impedance that cancels that of the transmission line on the right. Remember, the short circuit line has no real impedance/admittance, so we just need to move it to the $-B_{in}$
+
+
+
+
+$v_{\Delta} \neq \frac{-i_2}{15}$
