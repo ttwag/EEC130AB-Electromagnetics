@@ -89,5 +89,46 @@ We want to solve the electrostatics problem with scalar quantity.
 
 We know that the tiny work done along the path against the E field is $dV = -\vec{E} \cdot d\vec{l} = \frac{dW}{q}$
 
-$$V_B - V_A = V_{AB} = \int_{A}^{B} dV = -\int_{A}^{B} \vec{E} \cdot d\vec{l} = \frac{J}{C}$$
+To move the charge from A to B, we need to do work. At point B, the charge has potential energy relative to point A: 
 
+$$V_B - V_A = V_{AB} = \int_{A}^{B} dV = -\int_{A}^{B} \vec{E} \cdot d\vec{l} = \frac{Potential \space Energy}{Unit \space Charge} = \frac{J}{C}$$
+
+### Potential From Point Charge
+
+What's the electrostatic potential of a distance R from a point charge?
+
+First, we want a reference point where there is no E field, which is at $R = \infty$
+
+$$V(\vec{R}) = -\int_{A}^{B} \vec{E} \cdot d\vec{l} = -\int_{\infty}^{R} \frac{q}{4 \pi \epsilon_0 |\vec{R}'|^2}\hat{R}' \cdot \hat{R}' dR' = \frac{q}{4 \pi \epsilon_0 R}$$
+
+### Potential From a Charge Distribution
+
+The electrostatic potential at point p contributed by charge q is
+
+$$dV_p = \frac{dq}{4 \pi \epsilon_0 |\vec{r}_p - \vec{r}|}$$
+
+Now, the electrostatic potential from a volume charge density is:
+$$V_p = \int dV_p = \int \frac{\rho_v(\vec{r})dV}{4 \pi \epsilon_0 |\vec{r}_p - \vec{r}|}$$
+
+### Relationship to the E Field
+
+$$\vec{E} = -\vec{\nabla} V$$
+
+Force per charge = the negative of the change in potential per charge
+
+## Gauss' Law
+
+The amount of E field passes through a closed surface S
+
+$$\oint_S \vec{E} \cdot d\vec{A} = \frac{Q}{\epsilon_0}$$
+
+### Gauss' Law as a Tool
+Applicable to the following symmetries:
+* Spherical
+* Cylindrical
+* Planar
+
+Steps
+1. Identify symmetry in the field and write in simplified form.
+2. Define S so that flux integral will be easy ($|\vec{E}|$ should be constant on S).
+3. Evaluate the flux integral and enclosed charge.
