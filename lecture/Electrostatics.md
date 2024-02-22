@@ -132,3 +132,20 @@ Steps
 1. Identify symmetry in the field and write in simplified form.
 2. Define S so that flux integral will be easy ($|\vec{E}|$ should be constant on S).
 3. Evaluate the flux integral and enclosed charge.
+
+## Capacitance
+
+In response to an electric field, a surface charge forms on the surface of a conductor.
+
+$C = \frac{Q}{V}$
+
+$C_{parallel \space plate} = \epsilon_0 \frac{A}{d}$
+
+Capacitance depends on the geometry and the space between the conductors
+
+## Dielectric Material
+* In metals (good conductors), electrons are free and mobile.
+* In insulators (dielectric) electrons are not free and mobile.
+    * However, the outer electron could be pulled away and be modeled by an electric dipole with the proton.
+    * The dipole produces E field pointing in the opposite direction as the initial E field.
+    * The combine electric displacement field $\vec{D} = \epsilon \vec{E}$
