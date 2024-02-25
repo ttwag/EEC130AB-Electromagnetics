@@ -93,6 +93,8 @@ To move the charge from A to B, we need to do work. At point B, the charge has p
 
 $$V_B - V_A = V_{AB} = \int_{A}^{B} dV = -\int_{A}^{B} \vec{E} \cdot d\vec{l} = \frac{Potential \space Energy}{Unit \space Charge} = \frac{J}{C}$$
 
+Note that $\oint \vec{E} \cdot d\vec{l} = 0$ in a closed path.
+
 ### Potential From Point Charge
 
 What's the electrostatic potential of a distance R from a point charge?
@@ -133,19 +135,65 @@ Steps
 2. Define S so that flux integral will be easy ($|\vec{E}|$ should be constant on S).
 3. Evaluate the flux integral and enclosed charge.
 
+## Conductors
+* In a good conductor, under static conditions (electrostatics), the E field is 0 
+* Since E = 0 in a good conductor, charges must reside on the surface.
+* These surface charges will produce an E field normal to the surface, with $\vec{E_n} = \frac{\sigma}{\epsilon_0}\hat{n}$.
+* Conductors in E fields: When a good conductor is placed in an electric field, the charges arrange themselves on the surface to cancel electric fields inside the conductor.
+
+**Application**
+
+* Suppose we have a hollow conductor with an empty cavity and we applied some fields outside of the conductor, what's the E field inside the cavity?
+* If we do a line integral inside the conductor that partially overlaps the cavity, the integral must be 0. Since the E field in the conductor is 0, the E field in the cavity must be 0 for our result to sum to 0.
+
+$$\oint_{cavity + conductor} \vec{E} \cdot d\vec{l} = \oint_{cavity} \vec{E}_{cavity} \cdot d\vec{l} + \oint_{conductor} \vec{E}_{conductor} \cdot d\vec{l} = 0$$
+$$\vec{E}_{conductor} = 0 \implies \oint_{conductor} \vec{E}_{conductor} \cdot d\vec{l} = 0$$
+
+Therefore, 
+
+$$\oint_{cavity} \vec{E}_{cavity} \cdot d\vec{l} = 0 \implies \vec{E}_{cavity} = 0$$
+
 ## Capacitance
+
+![Figure7](./image/Figure7.png)
 
 In response to an electric field, a surface charge forms on the surface of a conductor.
 
+In a conductor, $\vec{E}_n = \frac{\sigma}{\epsilon_0}\hat{n}$, so $Q = \int_s \epsilon_0 \vec{E} \cdot d\vec{A}$
+
+And $V_{12} = -\int_{2}^{1} \vec{E} \cdot d\vec{l}$
+
+$$C = \frac{Q}{V} = \frac{\int_s \epsilon_0 \vec{E} \cdot d\vec{A}}{-\int_{2}^{1} \vec{E} \cdot d\vec{l}}$$
+
 $C = \frac{Q}{V}$
+
+Capacitance depends on the geometry and the space between the conductors
+
+
+**The Capacitance of Parallel Plate**
+
+![Figure8](./image/Figure8.png)
 
 $C_{parallel \space plate} = \epsilon_0 \frac{A}{d}$
 
-Capacitance depends on the geometry and the space between the conductors
+$V_o = -\int \vec{E} \cdot d\vec{l} = -\int_{0}^{d} (-\frac{\sigma}{\epsilon_0}) \hat{z} \cdot \hat{z} dz = \frac{\sigma}{\epsilon_0}d$
+
+$\sigma = \frac{Q}{A} \implies Q = A\sigma$
+
+$C = \frac{Q}{V_o} = \frac{\epsilon_0 A\sigma}{d\sigma} = \epsilon_0\frac{A}{d}$
 
 ## Dielectric Material
 * In metals (good conductors), electrons are free and mobile.
 * In insulators (dielectric) electrons are not free and mobile.
     * However, the outer electron could be pulled away and be modeled by an electric dipole with the proton.
     * The dipole produces E field pointing in the opposite direction as the initial E field.
+    * This dipole field is approximately proportional to the E field in the case of a **linear dielectric**.
     * The combine electric displacement field $\vec{D} = \epsilon \vec{E}$
+    * Practically, we solve dielectric problems by replacing the permittivity of free space with the permittivity.
+## Summary
+Maxwell's Equation for Electrostatics
+| Law | Integral Form | Differential Form |
+|----| -----| -----|
+| Gauss' Law | $\oint_s \vec{E} \cdot d\vec{A} = \frac{Q}{\epsilon_0}$ | $\vec{\nabla} \cdot \vec{E} = \frac{\rho(\vec{r})}{\epsilon_0}$ |
+| Work Done | $\oint_c \vec{E} \cdot d\vec{l} = 0$ | $\vec{\nabla} \times \vec{E} = 0$ |
+
