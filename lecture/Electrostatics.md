@@ -143,7 +143,7 @@ Steps
 
 **Application**
 
-* Suppose we have a hollow conductor with an empty cavity and we applied some fields outside of the conductor, what's the E field inside the cavity?
+* **Faraday Cage**: Suppose we have a hollow conductor with an empty cavity and we applied some fields outside of the conductor, what's the E field inside the cavity?
 * If we do a line integral inside the conductor that partially overlaps the cavity, the integral must be 0. Since the E field in the conductor is 0, the E field in the cavity must be 0 for our result to sum to 0.
 
 $$\oint_{cavity + conductor} \vec{E} \cdot d\vec{l} = \oint_{cavity} \vec{E}_{cavity} \cdot d\vec{l} + \oint_{conductor} \vec{E}_{conductor} \cdot d\vec{l} = 0$$
@@ -152,6 +152,8 @@ $$\vec{E}_{conductor} = 0 \implies \oint_{conductor} \vec{E}_{conductor} \cdot d
 Therefore, 
 
 $$\oint_{cavity} \vec{E}_{cavity} \cdot d\vec{l} = 0 \implies \vec{E}_{cavity} = 0$$
+
+**Takeaway:** There's zero electric field inside the conductor because of the cancellation from the induced field. Since $\vec{E} = -\vec{\nabla}V$ (E field is the derivative of V), this is why the voltage stays the same at the same node.
 
 ## Capacitance
 
@@ -170,7 +172,7 @@ $C = \frac{Q}{V}$
 Capacitance depends on the geometry and the space between the conductors
 
 
-**The Capacitance of Parallel Plate**
+**Example: The Capacitance of Parallel Plates**
 
 ![Figure8](./image/Figure8.png)
 
@@ -182,14 +184,23 @@ $\sigma = \frac{Q}{A} \implies Q = A\sigma$
 
 $C = \frac{Q}{V_o} = \frac{\epsilon_0 A\sigma}{d\sigma} = \epsilon_0\frac{A}{d}$
 
+**Takeaway**: Capacitance is the ratio between charge and applied voltage. It depends on the space between the plates ($\epsilon$) and the geometry (A and d) of the plates.
+
 ## Dielectric Material
 * In metals (good conductors), electrons are free and mobile.
 * In insulators (dielectric) electrons are not free and mobile.
     * However, the outer electron could be pulled away and be modeled by an electric dipole with the proton.
     * The dipole produces E field pointing in the opposite direction as the initial E field.
     * This dipole field is approximately proportional to the E field in the case of a **linear dielectric**.
-    * The combine electric displacement field $\vec{D} = \epsilon \vec{E}$
-    * Practically, we solve dielectric problems by replacing the permittivity of free space with the permittivity.
+    * To find the E field inside a dielectric material, we must factor in the dipole field.
+
+**Electric Flux Density**
+$$\vec{D} = \epsilon_0\vec{E} + \vec{p}$$
+$$\approx \epsilon \vec{E}$$
+, where $\vec{E}$ is the applied E field, $\vec{p}$ is the dipole field, and $\epsilon$ is the permittivity.
+
+Practically, we solve dielectric problems by replacing the permittivity of free space with the permittivity.
+
 ## Summary
 Maxwell's Equation for Electrostatics
 | Law | Integral Form | Differential Form |
@@ -197,3 +208,7 @@ Maxwell's Equation for Electrostatics
 | Gauss' Law | $\oint_s \vec{E} \cdot d\vec{A} = \frac{Q}{\epsilon_0}$ | $\vec{\nabla} \cdot \vec{E} = \frac{\rho(\vec{r})}{\epsilon_0}$ |
 | Work Done | $\oint_c \vec{E} \cdot d\vec{l} = 0$ | $\vec{\nabla} \times \vec{E} = 0$ |
 
+## Questions
+* Can we apply Gauss' Law on a line or sheet that is not infinite in length?
+* Why do we always assume an infinite sheet of **uniform** charge?
+* What exactly is the Electric Flux Density
