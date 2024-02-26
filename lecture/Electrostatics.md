@@ -201,6 +201,28 @@ $$\approx \epsilon \vec{E}$$
 
 Practically, we solve dielectric problems by replacing the permittivity of free space with the permittivity.
 
+## Electric Field at the Boundary: Dielectric
+
+On the boundary of two dielectric materials, the E field has a tangential and normal component.
+
+![Figure9](./image/Figure9.png)
+
+**Tangential Component**
+
+By using the path integral and the E field loop law, we get that
+
+$$\vec{E_{1t}} = \vec{E_{2t}}$$
+
+$$\frac{\vec{D_{1t}}}{\epsilon_1} = \frac{\vec{D_{2t}}}{\epsilon_2}$$
+
+**Normal Component**
+
+By using the flux integral and the Gauss's Law, we get that 
+
+$$D_{1n} - D_{2n} = \rho_s$$
+
+$$\epsilon_1 E_{1n} - \epsilon_2 E_{2n} = \rho_s$$
+
 ## Summary
 Maxwell's Equation for Electrostatics
 | Law | Integral Form | Differential Form |
