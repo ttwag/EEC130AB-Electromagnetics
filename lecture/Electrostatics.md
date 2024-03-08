@@ -161,7 +161,7 @@ $$\oint_{cavity} \vec{E}_{cavity} \cdot d\vec{l} = 0 \implies \vec{E}_{cavity} =
 
 In response to an electric field, a surface charge forms on the surface of a conductor.
 
-At the boundary of the conductor, $\vec{E}_n = \frac{\sigma}{\epsilon_0}\hat{n}$, so $Q = \int_s \epsilon_0 \vec{E} \cdot d\vec{A}$
+By Gauss' Law, $Q = \int_s \epsilon_0 \vec{E} \cdot d\vec{A}$
 
 And $V_{12} = -\int_{2}^{1} \vec{E} \cdot d\vec{l}$
 
