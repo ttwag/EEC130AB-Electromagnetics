@@ -65,8 +65,11 @@ Note that when r << L or when L approaches infinity,
 
 $$\vec{B}_p = \frac{\mu_0 I}{2\pi r} \hat{\phi}$$
 
-## Amerpère's Laws
-**Applicable only on Infinite cylinders or lines of current**
+## Ampère's Laws
+
+**Applicable only on Infinite cylinders or lines of current.**
+
+**Although current in a finite cylinder produces a constant B field in the $\hat{\phi}$ direction from the previous calculation, it is not physical and the actual field is more complicated.**
 
 If we have current flowing through space, we can draw a contour c and the B field piercing through the contour is proportional to the enclosed current.
 
@@ -81,62 +84,100 @@ $$\oint_c \vec{B} \cdot d\vec{l} = \mu_0 i \implies \int_S \Big( \vec{\nabla \ti
 
 $$\implies \vec{\nabla} \times \vec{B} = \mu_0 \vec{J}$$
 
-## Inductance
-
+## Magnetic Flux
 **Magnetic Flux:** magnetic fields flowing through an open surface S that has a boundary.
 
 $$\phi_B = \int_S \vec{B} \cdot d\vec{A}$$
 
+## Inductance
+
 **Inductance**
 
-By applying the Biot-Savart Law on a closed loop to get the B field, we get
+By applying the Biot-Savart Law on a closed loop to get the B field, we get the magnetic flux through the loop as:
 
 $$\phi_B = \Big(\frac{\mu_0}{4 \pi}g\Big) I$$
 
 with some constant g, and we could simplify the expression to
 
-$$\phi_B = LI$$
+$$N \phi_B = LI$$
 
-with L be the **inductance** of the loop
+with N as the number of loop and L be the **inductance** of the loop
 
 **Intuition**
 
 By applying current to the wire, we produce magnetic flux, and vice versa. This is analogous to the capacitor, where the charge in the plate is proportional to the applied voltage and vice versa.
 
+## Infinite Sheet of Current
+
+Given an infinite sheet of current in the x-y plane with current flowing in the +x direction with a linear density of K, find the B field everywhere.
+
+![Figure11](./image/Figure11.png)
+
+If we look down from the top of the z-y plane, we will find that the B field produced by these currents only exists in $\hat{y}$ direction because of the symmetry.
+
+![Figure12](./image/Figure12.png)
+
+The B field is
+
+$$\oint_c \vec{B} \cdot d\vec{l} = \mu_0 \int Kd\vec{l}$$
+
+$$\implies |\vec{B}| l + |\vec{B}|l = \mu_0 Kl$$
+
+$$\implies |\vec{B}| = \frac{\mu_0 K}{2}$$
+
+$$
+\vec{B}(z) =
+\begin{cases}
+    \big( \frac{\mu_0 K}{2} \big) \hat{y} & z < 0 \\
+    -\big( \frac{\mu_0 K}{2} \big) \hat{y} &  z > 0
+\end{cases}
+$$
+
+
 ## Solenoid
+
+![Figure13](./image/Figure13.png)
 
 Consider a solenoid pointing in the z direction with current flowing out of the page.
 
-If we think of the solenoid as two infinite sheet of current, we will find that the B field outside of solenoid is zero and inside of solenoid is 
+If we think of the solenoid as two infinite sheets of current, we will find that the B field outside of the solenoid is zero and inside of the solenoid is: 
 
-$$\vec{B} = 2 \big(\frac{\mu_0 K}{2}\Big)\hat{z}$$
+$$\vec{B} = 2 \Big(\frac{\mu_0 K}{2}\Big)\hat{z} = \frac{\mu_0 N I}{l}\hat{z}$$
 
 where $K = \frac{NI}{l}$
 
-$$\phi_B = \int \vec{B} \cdot d\vec{A} = |\vec{B}| \int dA = |\vec{B}|A$$
+$$N\phi_B = \int \vec{B} \cdot d\vec{A} = |\vec{B}| \int dA = |\vec{B}|A$$
 
-$$L' = \frac{\mu_0 N^2}{l^2}A$$
+$$L' = \frac{N\phi_B}{Il} = \frac{\mu_0 N^2}{l^2}A$$
 
 ## Magnetic Material
 
-Applying B field on material causes the material to form magnetized domains that could be thought of a bar magnet with north and south pole.
+Applying B field to materials causes the material to form magnetized domains that could be thought of a bar magnet with north and south pole.
 
-$$\vec{B} = \mu_0 \vec{H} + \mu_0 \vec{M} = \vec{B} = \mu_0 \mu_r \vec{H} = \mu \vec{H}$$
+$$\vec{B} = \mu_0 \vec{H} + \mu_0 \vec{M} = \mu_0\vec{H} + \mu_0 \chi_m \vec{H}$$
 
-where $\vec{H}$ is the applied field and $\vec{B}$ is the total field.
+$$\implies \vec{B} = \mu_0(1 + \chi_m)\vec{H} = \mu_0 \mu_r \vec{H}$$
+
+$$\vec{B} = \mu \vec{H}$$
+
+where $\vec{H}$ is the applied field and $\vec{B}$ is the total field, and $\mu$ is the general permeability.
 
 However, the magnetic response of the material depends on the material, and not all material gives a magnetic response.
 
 This is in contrast to the polarization of material under the E field, which is a common response among different materials.
 
 
-In summary,
+**In summary**,
 
 $$\vec{\nabla} \times \vec{H} = \vec{J}_F$$
 
-where $\vec{J}_F$ is the free current density
+where $\vec{J}_F$ is the free current density.
 
-and we could swap the permeability of the B field that we want to find in a material to the permeability of the material.
+Since 
+
+$$\vec{\nabla} \times \vec{B} = \vec{\nabla} \times (\mu_0 \vec{H} + \mu_0 \vec{M}) = \vec{\nabla} \times \mu \vec{H} = \mu (\vec{\nabla} \times\vec{H}) = \mu \vec{J}_F$$
+
+we could swap the free space permeability with the permeability of the material that we want to find the B field in.
 
 
 
