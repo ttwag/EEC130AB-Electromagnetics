@@ -127,6 +127,7 @@ $$\implies |\vec{B}| = \frac{\mu_0 K}{2}$$
 
 $$
 \vec{B}(z) =
+
 \begin{cases}
     \big( \frac{\mu_0 K}{2} \big) \hat{y} & z < 0 \\
     -\big( \frac{\mu_0 K}{2} \big) \hat{y} &  z > 0
@@ -178,10 +179,6 @@ Since
 $$\vec{\nabla} \times \vec{B} = \vec{\nabla} \times (\mu_0 \vec{H} + \mu_0 \vec{M}) = \vec{\nabla} \times \mu \vec{H} = \mu (\vec{\nabla} \times\vec{H}) = \mu \vec{J}_F$$
 
 we could swap the free space permeability with the permeability of the material that we want to find the B field in.
-
-
-
-
 
 ## Summary
 
