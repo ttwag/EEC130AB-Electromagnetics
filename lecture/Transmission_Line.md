@@ -61,6 +61,7 @@ v_A(t) = v_0cos(\omega (t - t_d)) \\
 $$
 
 As discussed in the wave basics, the time delay is the time it takes for the wave to travel to the location, 
+
 $$
 t_d = \frac{l}{v_p}, \\
 = \frac{l}{\lambda f} \\
