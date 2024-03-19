@@ -292,7 +292,7 @@ $\vec{I}(z) = \frac{V_0^+}{Z_0} (e^{-j\beta z} - \gamma e^{j\beta z})$
 
 If we plug the voltage and current phasors into the average power equation, we get:
 
-$P_{avg} = \frac{1}{2} Re \{\frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)\} = \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)$ 
+$P_{avg} = \frac{1}{2} Re \{ \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2) \} = \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)$ 
 
 The first term represents the power carried by the incident wave, and the second term is the power carried by the reflected wave. 
 
