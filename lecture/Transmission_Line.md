@@ -281,7 +281,7 @@ $d_{max} = \frac{n \lambda}{2} + \theta{\gamma} \frac{\lambda}{4 \pi}$
 
 **Average Power** 
 
-$P_{avg} = \frac{1}{2}Re\{\vec{I}\vec{V}\} = \frac{1}{2} Re\{Z_{in}\} |\vec{I}|^2$
+$P_{avg} = \frac{1}{2}Re[\vec{I}\vec{V}] = \frac{1}{2} Re[Z_{in}] |\vec{I}|^2$
 
 
 Suppose we have the following voltage and current waves on the transmission line:
@@ -292,7 +292,7 @@ $\vec{I}(z) = \frac{V_0^+}{Z_0} (e^{-j\beta z} - \gamma e^{j\beta z})$
 
 If we plug the voltage and current phasors into the average power equation, we get:
 
-$P_{avg} = \frac{1}{2} Re \{ \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2) \} = \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)$ 
+$P_{avg} = \frac{1}{2} Re[\frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)] = \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)$ 
 
 The first term represents the power carried by the incident wave, and the second term is the power carried by the reflected wave. 
 
