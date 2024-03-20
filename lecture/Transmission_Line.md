@@ -382,9 +382,9 @@ We want $Z_{in} = R_{in} + j X_{in} = Z_0$
 
 Objective of matching: $\bar{Z}_{in} = 1 + j0$
 
-which is also $\bar{Y}_{in} = \frac{1}{\bar{Z}_{in}}$
+which is also $\bar{Y}\_{in} = \frac{1}{\bar{Z}\_{in}}$
 
-Recall that we can add admittances, $\bar{Y}_{in} = \bar{g}_{in} + j \bar{b}_{in}$, when elements are in parallel.
+Recall that we can add admittances, $\bar{Y}\_{in} = \bar{g}\_{in} + j \bar{b}\_{in}$, when elements are in parallel.
 
 **Steps**
 
@@ -392,14 +392,14 @@ Recall that we can add admittances, $\bar{Y}_{in} = \bar{g}_{in} + j \bar{b}_{in
 
 Note: Be aware of normalized and unnormalized quantities. 
 
-$Y_{in} = \frac{Z_0}{\bar{Z}_{in}} = \frac{Z_0}{\bar{Y}_{in}}$
+$Y_{in} = \frac{Z_0}{\bar{Z}\_{in}} = \frac{Z_0}{\bar{Y}\_{in}}$
 
 
 |Steps|Instruction|Explanation|
 |----:|-----------|-----------|
 |1|Plot $\bar{Z}_L$ and convert to $\bar{Y}_L$| We are adding an element in parallel, effectively adding admittance of the element and the transmission line after it.
-|2|Adjust the element position (rotate through Smith Chart) so that $\bar{Y}_L(d) = 1 + j B_{in}$. Rotate until we are at the $\bar{g}_{L} = 1$ circle.|Rotation corresponds to adding length, d, between the element and the load. We want a length such that $\bar{Y}_L(d) = 1 + jB_{in}$
-|3|Choose the value of the element, $X$, to eliminate $j B_{in}$. Read off $\bar{B}_{in}$ value and choose the appropriate element and value to cancel it. | $\bar{Y}_{in} = \bar{Y}_{Element} + \bar{Y}_L = jX + (1 + jB_{in}) = 1$ 
+|2|Adjust the element position (rotate through Smith Chart) so that $\bar{Y}\_{L}(d) = 1 + j B_{in}$. Rotate until we are at the $\bar{g}_{L} = 1$ circle.|Rotation corresponds to adding length, d, between the element and the load. We want a length such that $\bar{Y}\_{L}(d) = 1 + jB_{in}$
+|3|Choose the value of the element, $X$, to eliminate $j B_{in}$. Read off $\bar{B}_{in}$ value and choose the appropriate element and value to cancel it. | $\bar{Y}\_{in} = \bar{Y}\_{Element} + \bar{Y}\_L = jX + (1 + jB_{in}) = 1$ 
 
 **Single-Stub Matching**
 
