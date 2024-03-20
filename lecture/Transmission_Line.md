@@ -386,7 +386,7 @@ which is also
 
 
 
-$\bar{Y_{in}} = \frac{1}{\bar{Z_{in}}}$
+$\bar{Y}_{in} = \frac{1}{\bar{Z}_{in}}$
 
 Recall that we can add admittances, $\bar{Y}_{in} = \bar{g}_{in} + j \bar{b}_{in}$, when elements are in parallel.
 
