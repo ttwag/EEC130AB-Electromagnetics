@@ -43,7 +43,7 @@ The total field from multiple charges is the sum of fields from individual charg
 
 The sum of the N number of the E field at charge p:
 
-$$\vec{E}_p = \frac{1}{4 \pi \epsilon_0} \sum_{i = 1}^{N} \frac{q_i}{|\vec{R} - \vec{R}_i|^2} \frac{\vec{R} - \vec{R}_i}{|\vec{R} - \vec{R}_i|}$$
+$$\vec{E}\_p = \frac{1}{4 \pi \epsilon_0} \sum_{i = 1}^{N} \frac{q_i}{|\vec{R} - \vec{R}\_i|^2} \frac{\vec{R} - \vec{R}\_i}{|\vec{R} - \vec{R}\_i|}$$
 
 ## Charge Distribution
 
