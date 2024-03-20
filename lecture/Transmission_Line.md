@@ -292,7 +292,7 @@ $\vec{I}(z) = \frac{V_0^+}{Z_0} (e^{-j\beta z} - \gamma e^{j\beta z})$
 
 If we plug the voltage and current phasors into the average power equation, we get:
 
-$P_{avg} = \frac{1}{2} Re[\frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)] = \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)$ 
+$P_{avg} = \frac{1}{2} Re[\frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)] = \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)$
 
 The first term represents the power carried by the incident wave, and the second term is the power carried by the reflected wave. 
 
@@ -330,7 +330,7 @@ A transmission line could behave as an inductor or capacitor depending on the lu
 * The group of circles lying on the horizontal axis is the real part of the $\bar{Z}_L$, and the top and bottom curves represent its imaginary part.
 
 
-* The chart is bounded by $|\gamma| = 1$, which means $|\gamma| < 1 $ in the smith chart. This is because the transmission line cannot reflect more than it sends in.
+* The chart is bounded by $|\gamma| = 1$, which means $|\gamma| < 1$ in the smith chart. This is because the transmission line cannot reflect more than it sends in.
 
 * A matched load should have a reflection coefficient at the center so that $\bar{Z}_L = 1$, thus $\gamma = \bar{Z}_L - 1 = 0$.
 
@@ -372,7 +372,7 @@ $$Z(d) = \frac{\vec{V}(-d)}{\vec{I}(-d)} = Z_0 \left( \frac{1 + \gamma e^{-2j \b
 
 We observe that when $d = 0$, $Z(d)$ is precisely $Z_L$. As we move to a larger d (traveling from load to generator), $\gamma$ is multiplied by a phase $e^{-2j\beta d}$.
 
-*Therefore, traveling from load to generator will result in *clockwise* rotation in the Smith Chart since the coordinate of the Smith Chart is based on $\gamma$*
+*Therefore, traveling from load to generator will result in *clockwise* rotation in the Smith Chart since the coordinate of the Smith Chart is based on $\gamma$
 
 **Lumped Element Impedance Matching**
 
@@ -380,7 +380,7 @@ We will design networks to match $Z_L$ to $Z_0$ to maximize power transmission.
 
 We want $Z_{in} = R_{in} + j X_{in} = Z_0$
 
-Objective of matching: $\bar{Z}_{in} = 1 + j 0$
+Objective of matching: $\bar{Z}_{in} = 1 + j0$
 
 which is also $\bar{Y}_{in} = \frac{1}{\bar{Z}_{in}}$
 
