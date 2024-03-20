@@ -384,9 +384,9 @@ Objective of matching: $\bar{Z}_{in} = 1 + j0$
 
 which is also 
 
-$X = 1$
 
-$\bar{Y}_{in} = \frac{1}{\bar{Z}_{in}}$
+
+$\bar{Y_{in}} = \frac{1}{\bar{Z_{in}}}$
 
 Recall that we can add admittances, $\bar{Y}_{in} = \bar{g}_{in} + j \bar{b}_{in}$, when elements are in parallel.
 
