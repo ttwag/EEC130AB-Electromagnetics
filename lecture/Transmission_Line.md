@@ -384,6 +384,8 @@ Objective of matching: $\bar{Z}_{in} = 1 + j0$
 
 which is also $\bar{Y}_{in} = \frac{1}{\bar{Z}_{in}}$
 
+$\bar{Y}_{\text{in}} = \frac{1}{\bar{Z}_{\text{in}}}$
+
 Recall that we can add admittances, $\bar{Y}_{in} = \bar{g}_{in} + j \bar{b}_{in}$, when elements are in parallel.
 
 **Steps**
@@ -393,6 +395,7 @@ Recall that we can add admittances, $\bar{Y}_{in} = \bar{g}_{in} + j \bar{b}_{in
 Note: Be aware of normalized and unnormalized quantities. 
 
 $Y_{in} = \frac{Z_0}{\bar{Z}_{in}} = \frac{Z_0}{\bar{Y}_{in}}$
+
 
 |Steps|Instruction|Explanation|
 |----:|-----------|-----------|
