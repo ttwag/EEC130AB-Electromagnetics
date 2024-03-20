@@ -152,7 +152,7 @@ $$\vec{E}\_{conductor} = 0 \implies \oint_{conductor} \vec{E}\_{conductor} \cdot
 
 Therefore, 
 
-$$\oint_{cavity} \vec{E}_{cavity} \cdot d\vec{l} = 0 \implies \vec{E}_{cavity} = 0$$
+$$\oint_{cavity} \vec{E}\_{cavity} \cdot d\vec{l} = 0 \implies \vec{E}\_{cavity} = 0$$
 
 **Takeaway:** There's zero electric field inside the conductor because of the cancellation from the induced field. Since $\vec{E} = -\vec{\nabla}V$ (E field is the derivative of V), this is why the voltage stays the same at the same node.
 
