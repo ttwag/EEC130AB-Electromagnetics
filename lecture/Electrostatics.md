@@ -146,9 +146,9 @@ Steps
 * **Faraday Cage**: Suppose we have a hollow conductor with an empty cavity and we applied some fields outside of the conductor, what's the E field inside the cavity?
 * If we do a line integral inside the conductor that partially overlaps the cavity, the integral must be 0. Since the E field in the conductor is 0, the E field in the cavity must be 0 for our result to sum to 0.
 
-$$\oint_{cavity + conductor} \vec{E} \cdot d\vec{l} = \oint_{cavity} \vec{E}_{cavity} \cdot d\vec{l} + \oint_{conductor} \vec{E}_{conductor} \cdot d\vec{l} = 0$$
+$$\oint_{cavity + conductor} \vec{E} \cdot d\vec{l} = \oint_{cavity} \vec{E}\_{cavity} \cdot d\vec{l} + \oint_{conductor} \vec{E}\_{conductor} \cdot d\vec{l} = 0$$
 
-$$\vec{E}_{conductor} = 0 \implies \oint_{conductor} \vec{E}_{conductor} \cdot d\vec{l} = 0$$
+$$\vec{E}\_{conductor} = 0 \implies \oint_{conductor} \vec{E}\_{conductor} \cdot d\vec{l} = 0$$
 
 Therefore, 
 
