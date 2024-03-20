@@ -14,7 +14,7 @@
 
 Force on $q_2$ from $q_1$ = 
 
-$$\vec{F}_{21} = \frac{q_1 q_2}{4 \pi \epsilon_0 R_{12}^2} \hat{r}_{12}$$
+$$\vec{F}\_{21} = \frac{q_1 q_2}{4 \pi \epsilon_0 R_{12}^2} \hat{r}\_{12}$$
 
 ,where $\hat{r}_{12}$ is the unit vector from charge $q_1$ to $q_2$.
 
