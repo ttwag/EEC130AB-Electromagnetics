@@ -382,8 +382,9 @@ We want $Z_{in} = R_{in} + j X_{in} = Z_0$
 
 Objective of matching: $\bar{Z}_{in} = 1 + j0$
 
+which is also 
 
-which is also $\bar{Y}_{in} = \frac{1}{\bar{Z}_{in}}$
+$\bar{Y}_{in} = \frac{1}{\bar{Z}_{in}}$
 
 Recall that we can add admittances, $\bar{Y}_{in} = \bar{g}_{in} + j \bar{b}_{in}$, when elements are in parallel.
 
