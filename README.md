@@ -1,15 +1,15 @@
 # EEC130AB - Electromagnetics
 
-This repository contains lecture notes of the EEC130 series from University of California, Davis. The series covers the theoretical foundations behind Electromagnetism. It is important for Electrical Engineering students who want to go into the Radio Frequency sub-field.
+This repository contains lecture notes of the EEC130 series from the University of California, Davis. The series covers the theoretical foundations behind Electromagnetism. It is important for Electrical Engineering students who want to go into the Radio Frequency sub-field.
 
 ## Course Content
 
 **EEC130A**
 
-* Transmission Line Basics
-* Electrostatics
-* Magnetostatics
-* Electrodynamics and Maxwell's Equations
+* [Transmission Line Basics](./lecture/Transmission_Line.md)
+* [Electrostatics](./lecture/Electrostatics.md)
+* [Magnetostatics](./lecture/Magnetostatics.md)
+* [Electrodynamics and Maxwell's Equations](./lecture/Electrodynamics.md)
 
 **EEC130B (Currently Updating)**
 
