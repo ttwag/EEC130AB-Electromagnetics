@@ -141,25 +141,23 @@ The results from KVL and KCL could be transformed into the phasor domain since $
 
 We have: 
 
-$$v(z, t) = Re\{\vec{V}(z) e^{j\omega t}\}$$
+$$v(z, t) = Re\\{\vec{V}(z) e^{j\omega t}\\}$$
 
-$$i(z, t) = Re\{\vec{I}(z) e^{j\omega t}\}$$
+$$i(z, t) = Re\\{\vec{I}(z) e^{j\omega t}\\}$$
 
 Take the KVL equation as an example, we get
 
-$$
-& \frac{\partial v(z, t)}{\partial z} = -R' \space i(z, t) - L'\frac{d i(z, t)}{d t} \\
+$$ \frac{\partial v(z, t)}{\partial z} = -R' \space i(z, t) - L'\frac{d i(z, t)}{d t} \\ $$
 
-& \implies \frac{\partial Re\{\vec{V}(z) e^{j\omega t}\}}{\partial z} = -R' Re\{\vec{I}(z) e^{j\omega t}\} - L' \frac{d Re\{\vec{I}(z) e^{j\omega t}\}}{d t} \\
+$$ \implies \frac{\partial Re\\{\vec{V}(z) e^{j\omega t}\\}}{\partial z} = -R' Re\\{\vec{I}(z) e^{j\omega t}\\} - L' \frac{d Re\\{\vec{I}(z) e^{j\omega t}\\}}{d t}$$
 
-& \implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t}\} - L'Re\{\frac{d}{dt}\vec{I}(z)e^{j\omega t}\} \\
+$$ \implies Re\\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\\} = Re\\{-R'\vec{I}(z) e^{j\omega t}\\} - L'Re\\{\frac{d}{dt}\vec{I}(z)e^{j\omega t}\\} $$
 
-& \implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t}\} - Re\{L'j\omega \vec{I}(z)e^{j\omega t}\} \\
+$$ \implies Re\\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\\} = Re\\{-R'\vec{I}(z) e^{j\omega t}\\} - Re\\{L'j\omega \vec{I}(z)e^{j\omega t}\\} $$
 
-& \implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t} - L'j\omega \vec{I}(z)e^{j\omega t}\} \\
+$$ \implies Re\\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\\} = Re\\{-R'\vec{I}(z) e^{j\omega t} - L'j\omega \vec{I}(z)e^{j\omega t}\\} $$
 
-& \implies \frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t} = -R'\vec{I}(z) e^{j\omega t} - L'j\omega \vec{I}(z)e^{j\omega t}
-$$
+$$ \implies \frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t} = -R'\vec{I}(z) e^{j\omega t} - L'j\omega \vec{I}(z)e^{j\omega t} $$
 
 After canceling the exponential term, we finally have
 
@@ -201,8 +199,8 @@ $$\vec{V}(z) = V_0^+ e^{-j\beta z} + V_0^- e^{j\beta z}$$
 
 First transform the solutions into the time domain, which is:
 
-$$v(z, t) = Re\{\vec{V}(z) e^{j\omega t}\} =  V_0^+ cos(\omega t - \beta z) + V_0^-cos(\omega t + \beta z)$$
-$$i(z, t) = Re\{\vec{I}(z) e^{j\omega t}\} = I_0^+ cos(\omega t - \beta z) + I_0^-cos(\omega t + \beta z)$$
+$$v(z, t) = Re\\{\vec{V}(z) e^{j\omega t}\\} =  V_0^+ cos(\omega t - \beta z) + V_0^-cos(\omega t + \beta z)$$
+$$i(z, t) = Re\\{\vec{I}(z) e^{j\omega t}\\} = I_0^+ cos(\omega t - \beta z) + I_0^-cos(\omega t + \beta z)$$
 
 This represents a traveling wave going to +z and -z direction with amplitude of $V_0^+$ and $V_0^-$.
 
@@ -312,7 +310,7 @@ $d_{max} = \frac{n \lambda}{2} + \theta{\gamma} \frac{\lambda}{4 \pi}$
 
 **Average Power** 
 
-$P_{avg} = \frac{1}{2}Re[\vec{I}\vec{V}] = \frac{1}{2} Re[Z_{in}] |\vec{I}|^2$
+$P_{avg} = \frac{1}{2}Re\\{\vec{I}\vec{V}\\} = \frac{1}{2} Re\\{Z_{in}\\} |\vec{I}|^2$
 
 
 Suppose we have the following voltage and current waves on the transmission line:
@@ -323,7 +321,7 @@ $\vec{I}(z) = \frac{V_0^+}{Z_0} (e^{-j\beta z} - \gamma e^{j\beta z})$
 
 If we plug the voltage and current phasors into the average power equation, we get:
 
-$P_{avg} = \frac{1}{2} Re[\frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)] = \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)$
+$P_{avg} = \frac{1}{2} Re\\{\frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)\\} = \frac{|V_0^+|^2}{Z_0}(1 - |\gamma|^2)$
 
 The first term represents the power carried by the incident wave, and the second term is the power carried by the reflected wave. 
 
