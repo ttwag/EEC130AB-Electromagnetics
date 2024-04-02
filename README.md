@@ -15,3 +15,8 @@ This repository contains lecture notes of the EEC130 series from the University 
 
 
 You can see the detailed course description in [https://ece.ucdavis.edu/course-catalog](https://ece.ucdavis.edu/course-catalog)
+
+## Why Study Electromagnetics?
+
+* With knowledge of electric and magnetic fields, we can store and process information and energy.
+* With knowledge of electromagnetic waves, we can transmit information and energy.

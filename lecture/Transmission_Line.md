@@ -14,7 +14,7 @@ y(x, t) = Acos(\frac{2\pi}{T}t - \frac{2\pi}{\lambda}x+\phi) \\
 = Acos(\omega t - \beta x + \phi)\\
 $$
 
-, where $A$ is the amplitude, $T$ is the period, $\lambda$ is the wavelength, and $\phi$ is the phase.
+, where $A$ is the amplitude, $T$ is the period, $\lambda$ is the wavelength, $\omega$ is the angular frequency, $\beta$ is the wave number, and $\phi$ is the phase.
 
 ### Direction of the wave
 
@@ -26,10 +26,14 @@ y(x, t) = Acos(\omega t - \beta x + \phi)\\
 = Acos(-\beta(x - \frac{\omega}{\beta}t))\\
 $$
 
+Therefore, we can think of $y(x, t)$ as $f(x - \frac{\omega}{\beta}t)$. 
+
+As t increases, the wave shifts to the right.
+
 ![Figure1](./image/Figure1.png)
 
 ### Phase Velocity
-Since the wave function is right shifted x unit by $\frac{\omega}{\beta}t$ 
+Since the wave function is right shifted $\Delta x$ unit by $\frac{\omega}{\beta}t$ 
 
 after a time $\Delta t$,
 
@@ -131,14 +135,39 @@ $$
 \end{align}
 $$
 
+
 ### Phasor Domain and the Helmholtz Equation
-The results from KVL and KCL could be transformed into the phasor domain since $v(z,t)$ and $i(z, t)$ have periodic dependence on time.
+The results from KVL and KCL could be transformed into the phasor domain since $v(z,t)$ and $i(z, t)$ have periodic dependence on time. 
+
+We have: 
+
+$$v(z, t) = Re\{\vec{V}(z) e^{j\omega t}\}$$
+
+$$i(z, t) = Re\{\vec{I}(z) e^{j\omega t}\}$$
+
+Take the KVL equation as an example, we get
+
+$$
+\frac{\partial v(z, t)}{\partial z} = -R' \space i(z, t) - L'\frac{d i(z, t)}{d t} \\
+
+\implies \frac{\partial Re\{\vec{V}(z) e^{j\omega t}\}}{\partial z} = -R' Re\{\vec{I}(z) e^{j\omega t}\} - L' \frac{d Re\{\vec{I}(z) e^{j\omega t}\}}{d t} \\
+
+\implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t}\} - L'Re\{\frac{d}{dt}\vec{I}(z)e^{j\omega t}\} \\
+
+\implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t}\} - Re\{L'j\omega \vec{I}(z)e^{j\omega t}\} \\
+
+\implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t} - L'j\omega \vec{I}(z)e^{j\omega t}\} \\
+
+\implies \frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t} = -R'\vec{I}(z) e^{j\omega t} - L'j\omega \vec{I}(z)e^{j\omega t}
+$$
+
+After canceling the exponential term, we finally have
 
 $$\frac{d\vec{V}}{dz} = -R'\vec{I} - j\omega L' \vec{I}$$
 
 $$\frac{d\vec{I}}{dz} = -G' \vec{V} - j\omega C' \vec{V}$$
 
-However, we will assume the transmission line is **lossless**, meaning that $R'$ and $G' = 0$ and no energy is lossed during the transmission Thus, the phasor domain equations become:
+However, we will assume the transmission line is **lossless**, meaning that $R'$ and $G' = 0$ and no energy is lossed during the transmission. Thus, the phasor domain equations become:
 
 $$\frac{d\vec{V}}{dz} = - j\omega L' \vec{I}$$
 
@@ -172,14 +201,16 @@ $$\vec{V}(z) = V_0^+ e^{-j\beta z} + V_0^- e^{j\beta z}$$
 
 First transform the solutions into the time domain, which is:
 
-$$v(z, t) = I_0^+ cos(\omega t - \beta z) + V_0^-cos(\omega t + \beta z)$$
-$$i(z, t) = I_0^+ cos(\omega t - \beta z) + I_0^-cos(\omega t + \beta z)$$
+$$v(z, t) = Re\{\vec{V}(z) e^{j\omega t}\} =  V_0^+ cos(\omega t - \beta z) + V_0^-cos(\omega t + \beta z)$$
+$$i(z, t) = Re\{\vec{I}(z) e^{j\omega t}\} = I_0^+ cos(\omega t - \beta z) + I_0^-cos(\omega t + \beta z)$$
 
 This represents a traveling wave going to +z and -z direction with amplitude of $V_0^+$ and $V_0^-$.
 
 These equations should apply to the part of the transmission line between sender and load, and it means that voltage varies between transmission lines. 
 
-Also, $\beta = \omega \sqrt{L'C'}$, so the phase velocity of the waves are $v_p = \frac{\omega}{\beta} = \frac{1}{\sqrt{L'C'}}$.
+Also, $\beta = \omega \sqrt{L'C'}$, so the phase velocity of the waves are 
+
+$$v_p = \frac{\omega}{\beta} = \frac{1}{\sqrt{L'C'}}$$
 
 ### Characteristic Impedance $(Z_0)$
 
