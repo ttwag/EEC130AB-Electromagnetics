@@ -148,17 +148,17 @@ $$i(z, t) = Re\{\vec{I}(z) e^{j\omega t}\}$$
 Take the KVL equation as an example, we get
 
 $$
-\frac{\partial v(z, t)}{\partial z} = -R' \space i(z, t) - L'\frac{d i(z, t)}{d t} \\
+& \frac{\partial v(z, t)}{\partial z} = -R' \space i(z, t) - L'\frac{d i(z, t)}{d t} \\
 
-\implies \frac{\partial Re\{\vec{V}(z) e^{j\omega t}\}}{\partial z} = -R' Re\{\vec{I}(z) e^{j\omega t}\} - L' \frac{d Re\{\vec{I}(z) e^{j\omega t}\}}{d t} \\
+& \implies \frac{\partial Re\{\vec{V}(z) e^{j\omega t}\}}{\partial z} = -R' Re\{\vec{I}(z) e^{j\omega t}\} - L' \frac{d Re\{\vec{I}(z) e^{j\omega t}\}}{d t} \\
 
-\implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t}\} - L'Re\{\frac{d}{dt}\vec{I}(z)e^{j\omega t}\} \\
+& \implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t}\} - L'Re\{\frac{d}{dt}\vec{I}(z)e^{j\omega t}\} \\
 
-\implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t}\} - Re\{L'j\omega \vec{I}(z)e^{j\omega t}\} \\
+& \implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t}\} - Re\{L'j\omega \vec{I}(z)e^{j\omega t}\} \\
 
-\implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t} - L'j\omega \vec{I}(z)e^{j\omega t}\} \\
+& \implies Re\{\frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t}\} = Re\{-R'\vec{I}(z) e^{j\omega t} - L'j\omega \vec{I}(z)e^{j\omega t}\} \\
 
-\implies \frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t} = -R'\vec{I}(z) e^{j\omega t} - L'j\omega \vec{I}(z)e^{j\omega t}
+& \implies \frac{\partial}{\partial z}\vec{V}(z) e^{j\omega t} = -R'\vec{I}(z) e^{j\omega t} - L'j\omega \vec{I}(z)e^{j\omega t}
 $$
 
 After canceling the exponential term, we finally have
