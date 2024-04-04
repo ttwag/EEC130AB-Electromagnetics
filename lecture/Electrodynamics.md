@@ -6,7 +6,6 @@ In dynamics, they are related.
 
 **Changes in the Magnetic Field Induce Electromotive Force that Results in a Current in a Wire Loop**
 
-
 Maxwell's Equation in Electrostatics
 
 Maxwell's Equation in Electrodynamics

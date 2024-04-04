@@ -135,6 +135,7 @@ $$
 \end{align}
 $$
 
+Note: these PDE should be familiar to the capacitor and inductor formula but with voltage and capacitance per unit length.
 
 ### Phasor Domain and the Helmholtz Equation
 The results from KVL and KCL could be transformed into the phasor domain since $v(z,t)$ and $i(z, t)$ have periodic dependence on time. 
@@ -199,10 +200,12 @@ $$\vec{V}(z) = V_0^+ e^{-j\beta z} + V_0^- e^{j\beta z}$$
 
 First transform the solutions into the time domain, which is:
 
-$$v(z, t) = Re\\{\vec{V}(z) e^{j\omega t}\\} =  V_0^+ cos(\omega t - \beta z) + V_0^-cos(\omega t + \beta z)$$
-$$i(z, t) = Re\\{\vec{I}(z) e^{j\omega t}\\} = I_0^+ cos(\omega t - \beta z) + I_0^-cos(\omega t + \beta z)$$
+$$v(z, t) = Re\\{\vec{V}(z) e^{j\omega t}\\} = Re\\{|V_0^+|e^{j \phi_+} e^{-j\omega t}\\} + Re\\{|V_0^-|e^{j \phi_-} e^{j\omega t}\\} =  V_0^+ cos(\omega t - \beta z + \phi_+) + V_0^-cos(\omega t + \beta z + \phi_-)$$
 
-This represents a traveling wave going to +z and -z direction with amplitude of $V_0^+$ and $V_0^-$.
+Similarly,
+$$ I_0^+ cos(\omega t - \beta z + \phi_+) + I_0^-cos(\omega t + \beta z + \phi_-)$$
+
+This represents a traveling wave going to +z and -z direction with amplitude of $V_0^+$ and $V_0^-$, which can be complex:  $|V_0^+| e^{j \omega \phi}$.
 
 These equations should apply to the part of the transmission line between sender and load, and it means that voltage varies between transmission lines. 
 
