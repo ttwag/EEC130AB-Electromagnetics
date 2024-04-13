@@ -190,7 +190,7 @@ $$|\vec{k}| = k_x^2 + k_y^2 + k_z^2$$
 
 If we put the general solution back to the phasor PDE, we get
 
-$$|\vec{k}| = \sqrt{\mu \epsilon} \omega$$
+$$|\vec{k}| = \sqrt{\mu \epsilon} \omega = \frac{2 \pi}{\lambda}$$
 
 **B Field**
 
@@ -228,15 +228,71 @@ $$\vec{k} \perp \bold{\vec{E}} $$
 
 $$\vec{k} \perp \bold{\vec{H}} $$
 
-From the cross product definition of E and B field, we further know that
+From the cross-product definition of the E and B fields, we further know that
 
 $$\bold{\vec{E}} \perp \bold{\vec{H}} $$
+
+**Intuition**
+
+When $\vec{k} \cdot \vec{r}$ is constant, or $\vec{k} \cdot \vec{r}_1 = \vec{k} \cdot \vec{r}_2$, there's a plane perpendicular to $\vec{k}$ where the field is constant.
+
+## Wave Polarization of a Plane Wave
+
+The polarization of a uniform plane wave describes the locus (collection of point) traced by the tip of the $\vec{E}$ vector (in the plane orthogonal to propagation) at a given point in space as a function of time.
+
+Two quantities describe the wave polarization:
+
+**Magnitude**
+
+$$|\bold{\vec{E}(t)}| = \sqrt{(\bold{E_x(t)})^2 + (\bold{E_y(t)})^2}$$
+
+**Inclination Angle**
+
+$$\phi = arctan(\frac{\bold{E_x(t)}}{\bold{E_y(t)}})$$
+
+
+$$\bold{\vec{E}(z)} = \hat{x} \vec{E}_x (z) + \hat{y} \vec{E}_y (z)$$
+$$ = \hat{x} E_{0x} e^{-jkz} + \hat{y} E_{0y} e^{-jkz}$$
+
+**Linear Polarization**
+
+No phase shift between the x and y component
+
+$$\bold{\vec{E}} = (\hat{x}a_x + \hat{y} a_y e^{j \phi})e^{-jkz}$$
+
+**Left-Hand Circular Polarization**
+$\vec{E}(z, t)$ traces out a circle in the clockwise direction.
+
+**Right-Hand Circular Polarization**
+$\vec{E}(z, t)$ traces out a circle in the counter-clockwise direction.
+
 
 ## Material Property
 * Nonmagnetic material means $\mu_r = 1$ and $\mu = \mu_0$
 * Vacuum means $\epsilon = \epsilon_0$ and $\mu = \mu_0$
 * The frequency of an EM wave is constant regardless of the material it's in. 
 * The wavelength of an EM wave is NOT constant in different materials. It is $$\lambda = \frac{\lambda_0}{\sqrt{\epsilon_r \mu_r}}$$
+
+
+The following assumptions are made in our analysis:
+
+**Time Invariance**:
+
+$\epsilon_r$ and $\mu_r$ are constant with time.
+
+**Homogenuous**: 
+
+$\epsilon_r$ and $\mu_r$ are constant with space.
+
+**Isotropy**: Material always behaves the same regardless of the field's direction.
+
+**Linearity**: 
+
+$\vec{D} = \epsilon \vec{E}$ and $\vec{B} = \mu \vec{H}$
+
+**Source-Free**
+
+$\rho, \vec{J} = 0$
 
 ## Conclusion
 
