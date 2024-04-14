@@ -168,7 +168,7 @@ In the phasor domain, the PDE takes in a form similar to the Helmholtz Equation 
 
 $$\vec{\nabla}^2 \bold{\vec{E}} + \mu \epsilon \omega^2\bold{\vec{E}} = 0$$
 
-The general solution looks like
+A plane wave solution looks like
 
 $$\bold{\vec{E}}(x, y, z) = \bold{\vec{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)}$$
 
@@ -196,13 +196,13 @@ $$|\vec{k}| = \sqrt{\mu \epsilon} \omega = \frac{2 \pi}{\lambda}$$
 
 By working with the E field phasor, we will get the magnetic field phasor
 
-$$\bold{H} (\vec{r}) = \frac{1}{\eta} \hat{k} \times \bold{\vec{E}} (\vec{r})$$
+$$\bold{\vec{H}} (\vec{r}) = \frac{1}{\eta} \hat{k} \times \bold{\vec{E}} (\vec{r})$$
 
 where $\hat{k}$ points in the direction of $\vec{k}$
 
 We can also find for the E field phasor that
 
-$$\bold{E}(\vec{r}) = -\eta \hat{k} \times \bold{\vec{H}}(\vec{r})$$
+$$\bold{\vec{E}}(\vec{r}) = -\eta \hat{k} \times \bold{\vec{H}}(\vec{r})$$
 
 **Geometric Restriction**
 
@@ -236,36 +236,105 @@ $$\bold{\vec{E}} \perp \bold{\vec{H}} $$
 
 When $\vec{k} \cdot \vec{r}$ is constant, or $\vec{k} \cdot \vec{r}_1 = \vec{k} \cdot \vec{r}_2$, there's a plane perpendicular to $\vec{k}$ where the field is constant.
 
-## Wave Polarization of a Plane Wave
+## Wave Polarization of a Uniform Plane Wave
 
-The polarization of a uniform plane wave describes the locus (collection of point) traced by the tip of the $\vec{E}$ vector (in the plane orthogonal to propagation) at a given point in space as a function of time.
+The polarization of a **uniform plane wave** describes the locus (collection of point) traced by the tip of the $\vec{E}$ vector (in the plane orthogonal to propagation) at a given point in space as a function of time.
 
+Assumptions:
+* The wave propagates in the z direction ($\vec{k}$ points to the z direction)
+* The plane wave is uniform, meaning the E field is constant in magnitude and direction on a plane at a given time.
+
+Since the wave vector points to the z direction, the E field must lie in the x-y plane, where polarization occurs.
+
+$$\bold{\vec{E}}(x, y, z) = \bold{\vec{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)} = (\bold{E_{0x}}\hat{x} + \bold{E_{0y}}\hat{y})e^{-j (k_z z)}$$
+
+
+
+$$\bold{\vec{E}}(z) = \hat{x} E_{0x} e^{-jk_z z} + \hat{y} E_{0y} e^{-jk_z z}$$
+
+Let $E_{0x} = a_x$ and $E_{0y} = a_ye^{j\delta}$,
+
+$$\bold{\vec{E}}(z) = (\hat{x} a_x + \hat{y} a_y e^{j \delta})e^{-jk_z z}$$
+
+In the time domain:
+
+$$\vec{E}(z, t) = Re\{\bold{\vec{E}}(z)e^{j\omega t}\}$$
+
+$$= \hat{x} a_x cos(\omega t - k_z z) + \hat{y} a_y cos(\omega t - k_z + \delta)$$
+
+$$= \hat{x}E_x(z, t) + \hat{y}E_{y}(z, t)$$
 Two quantities describe the wave polarization:
 
 **Magnitude**
 
-$$|\bold{\vec{E}(t)}| = \sqrt{(\bold{E_x(t)})^2 + (\bold{E_y(t)})^2}$$
+$$\vec{E}(z, t) = \sqrt{E_x(z, t)^2 + E_y(z, t)^2}$$
 
 **Inclination Angle**
 
-$$\phi = arctan(\frac{\bold{E_x(t)}}{\bold{E_y(t)}})$$
+$$\psi = arctan\Big(\frac{E_y(z, t)}{E_x(z, t)}\Big)$$
 
 
-$$\bold{\vec{E}(z)} = \hat{x} \vec{E}_x (z) + \hat{y} \vec{E}_y (z)$$
-$$ = \hat{x} E_{0x} e^{-jkz} + \hat{y} E_{0y} e^{-jkz}$$
+### Linear Polarization
 
-**Linear Polarization**
+$\vec{E}(z, t)$ traces out a line
 
-No phase shift between the x and y component
+Consider $\delta = 0$ or $\delta = \pi$,
 
-$$\bold{\vec{E}} = (\hat{x}a_x + \hat{y} a_y e^{j \phi})e^{-jkz}$$
+$$\bold{\vec{E}}(z) = (\hat{x} a_x + \hat{y} a_y e^{j \delta})e^{-jk_z z}$$
 
-**Left-Hand Circular Polarization**
+$$= (\hat{x} a_x \pm \hat{y} a_y)e^{-jk_z z}$$
+
+In the time domain at a fixed position, 
+
+$$\vec{E}(z = 0, t) = (\hat{x} a_x \pm \hat{y} a_y)cos(\omega t)$$
+
+**Magnitude**
+
+$$|\vec{E}(z = 0, t)| = \sqrt{a_x^2 + a_y^2}cos(\omega t)$$
+
+**Inclination Angle**
+
+$$\psi (z = 0, t) = arctan\Big(\frac{a_y}{a_x}\Big)$$
+
+## Left-Hand Circular Polarization (LHC)
+
+![Figure15](./image/Figure15.png)
+
 $\vec{E}(z, t)$ traces out a circle in the clockwise direction.
 
-**Right-Hand Circular Polarization**
+Consider $\delta = \frac{\pi}{2}$ and $a_x = a_y = a$,
+
+$$\bold{\vec{E}}(z) = (\hat{x} a + \hat{y} a e^{j \frac{\pi}{2}})e^{-jk_z z} = (\hat{x} a + \hat{y}aj)e^{-jkz}$$
+
+In the time domain, 
+
+$$\vec{E}(z, t) = Re\{\bold{\vec{E}}(z)e^{j\omega t}\} = \hat{x}a \space cos(\omega t - k_z z) + \hat{y} a \space cos(\omega t - k_z z + \frac{\pi}{2})$$
+
+$$= \hat{x}a \space cos(\omega t - k_z z) - \hat{y} a \space sin(\omega t - k_z z)$$
+
+**Magnitude**
+
+$$|\vec{E}(z, t)| = \sqrt{a^2 cos^2(\omega t) + a^2 sin^2(\omega t)} = a$$
+
+**Inclination Angle**
+
+$$\psi (z = 0, t) = arctan\Big(\frac{-a\space sin(\omega t)}{a\space cos(\omega t)}\Big) = -\omega t$$
+
+Notice that the magnitude of the vector is the same, but the angle decreases with time, so it rotates in the **clockwise**direction.
+
+## Right-Hand Circular Polarization (RHC)
+
 $\vec{E}(z, t)$ traces out a circle in the counter-clockwise direction.
 
+If we let $\delta = -\frac{\pi}{2}$ and follow the calculation in LHC, we will get that the
+
+**Magnitude**
+
+$$|\vec{E}(z, t)| = a$$
+
+**Inclination Angle**
+
+$$\psi (z = 0, t) = \omega t$$
 
 ## Material Property
 * Nonmagnetic material means $\mu_r = 1$ and $\mu = \mu_0$
