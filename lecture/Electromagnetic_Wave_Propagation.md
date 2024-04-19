@@ -176,6 +176,8 @@ where
 
 $$\bold{\vec{E}}_0 = \bold{E}_{0x}\hat{x} + \bold{E}_{0y}\hat{y} + \bold{E}_{0z}\hat{z}$$
 
+**Note that each component could be a complex number that carries a phase as well. They could also vary spatially.**
+
 **Wave Vector**
 
 We will introduce a vector, the **wave vector**, which is 
@@ -234,7 +236,7 @@ $$\bold{\vec{E}} \perp \bold{\vec{H}} $$
 
 **Intuition**
 
-When $\vec{k} \cdot \vec{r}$ is constant, or $\vec{k} \cdot \vec{r}_1 = \vec{k} \cdot \vec{r}_2$, there's a plane perpendicular to $\vec{k}$ where the field is constant.
+When $\vec{k} \cdot \vec{r}$ is constant, or $\vec{k} \cdot \vec{r}_1 = \vec{k} \cdot \vec{r}_2$, there's a plane perpendicular to $\vec{k}$ where the field is constant (**Uniform**). However, the field can change from plane to plane.
 
 ## Wave Polarization of a Uniform Plane Wave
 
@@ -267,11 +269,13 @@ Two quantities describe the wave polarization:
 
 **Magnitude**
 
-$$\vec{E}(z, t) = \sqrt{E_x(z, t)^2 + E_y(z, t)^2}$$
+$$\vec{E}(z = z_0, t) = \sqrt{E_x(z, t)^2 + E_y(z, t)^2}$$
+
+where $z_0$ is a constant
 
 **Inclination Angle**
 
-$$\psi = arctan\Big(\frac{E_y(z, t)}{E_x(z, t)}\Big)$$
+$$\psi (z = z_0, t) = arctan\Big(\frac{E_y(z, t)}{E_x(z, t)}\Big)$$
 
 
 ### Linear Polarization
@@ -286,15 +290,18 @@ $$= (\hat{x} a_x \pm \hat{y} a_y)e^{-jk_z z}$$
 
 In the time domain at a fixed position, 
 
-$$\vec{E}(z = 0, t) = (\hat{x} a_x \pm \hat{y} a_y)cos(\omega t)$$
+$$\vec{E}(z = z_0, t) = (\hat{x} a_x \pm \hat{y} a_y)cos(\omega t)$$
+
+where $z_0$ is a constant.
 
 **Magnitude**
 
-$$|\vec{E}(z = 0, t)| = \sqrt{a_x^2 + a_y^2}cos(\omega t)$$
+$$|\vec{E}(z = z_0, t)| = \sqrt{a_x^2 + a_y^2}cos(\omega t)$$
 
 **Inclination Angle**
 
-$$\psi (z = 0, t) = arctan\Big(\frac{a_y}{a_x}\Big)$$
+$$\psi (z = z_0, t) = arctan\Big(\frac{a_y}{a_x}\Big)$$
+
 
 ## Left-Hand Circular Polarization (LHC)
 
@@ -314,13 +321,13 @@ $$= \hat{x}a \space cos(\omega t - k_z z) - \hat{y} a \space sin(\omega t - k_z 
 
 **Magnitude**
 
-$$|\vec{E}(z, t)| = \sqrt{a^2 cos^2(\omega t) + a^2 sin^2(\omega t)} = a$$
+$$|\vec{E}(z = 0, t)| = \sqrt{a^2 cos^2(\omega t) + a^2 sin^2(\omega t)} = a$$
 
 **Inclination Angle**
 
 $$\psi (z = 0, t) = arctan\Big(\frac{-a\space sin(\omega t)}{a\space cos(\omega t)}\Big) = -\omega t$$
 
-Notice that the magnitude of the vector is the same, but the angle decreases with time, so it rotates in the **clockwise**direction.
+Notice that the magnitude of the vector is the same, but the angle decreases with time, so it rotates in the **clockwise** direction.
 
 ## Right-Hand Circular Polarization (RHC)
 
@@ -330,11 +337,61 @@ If we let $\delta = -\frac{\pi}{2}$ and follow the calculation in LHC, we will g
 
 **Magnitude**
 
-$$|\vec{E}(z, t)| = a$$
+$$|\vec{E}(z = 0, t)| = a$$
 
 **Inclination Angle**
 
 $$\psi (z = 0, t) = \omega t$$
+
+## Elliptical Polarization
+
+The electric field vector traces out an ellipse in the plane perpendicular to propagation.
+
+![Figure16](./image/Figure16.png)
+
+$a_{\xi}$ is the length of the major axis and $a_{\eta}$ is the length of the minor axis.
+
+**Ellipticity Angle**
+
+The shape and handedness of the ellipse are characterized by the ellipticity angle, $\chi$
+
+$$tan(\chi) = \pm \frac{a_{\eta}}{a_{\xi}} = \pm \frac{1}{R}$$
+
+$$-\frac{\pi}{4} \leq \chi \leq \frac{\pi}{4}$$
+
+The plus sign corresponds to clockwise rotation and the minus sign corresponds to counter-clockwise rotation.
+
+The following relationship between parameters also holds:
+
+$$sin2\chi = (sin2\psi_0)sin\delta$$
+
+$$-\frac{\pi}{4}\leq \chi \leq \frac{\pi}{4}$$
+
+
+**Rotation Angle**
+
+The angle between the major axis of the ellipse to the reference axis, which is the x-axis here.
+
+$$tan(2 \gamma) = tan(2 \psi_0) \space cos(\delta)$$
+
+$$-\frac{\pi}{2} \leq \gamma \leq \frac{\pi}{2}$$
+
+Rule:
+
+$\gamma > 0$ for $cos(\delta) > 0$
+
+$\gamma < 0$ for $cos(\delta) < 0$
+
+**Auxiliary Angle**
+
+$$tan(\psi_0) = \frac{a_y}{a_x}$$
+
+$$0 \leq \psi_0 \leq \frac{\pi}{2}$$
+
+
+
+
+
 
 ## Material Property
 * Nonmagnetic material means $\mu_r = 1$ and $\mu = \mu_0$
@@ -362,6 +419,96 @@ $\vec{D} = \epsilon \vec{E}$ and $\vec{B} = \mu \vec{H}$
 **Source-Free**
 
 $\rho, \vec{J} = 0$
+
+### Plane Wave in Conductors
+
+In a conductor, ohm's law applies
+
+$$\vec{J} = \sigma \vec{E}$$
+
+Therefore, we cannot assume the wave is traveling in the source-free medium. So the curl of H field becomes:
+
+$$\vec{\nabla} \times \bold{\vec{H}} = \sigma \bold{\vec{E}} + j\omega \epsilon \bold{\vec{E}}$$
+
+$$\implies \vec{\nabla} \times \bold{\vec{H}} = (\sigma + j\omega \epsilon )\bold{\vec{E}}$$
+
+$$\implies \vec{\nabla} \times \bold{\vec{H}} = j \omega (\frac{\sigma}{j \omega} + \epsilon )\bold{\vec{E}}$$
+
+In a conductor, let $\epsilon_c = \epsilon + \frac{\sigma}{j \omega} = \epsilon' - j \epsilon''$, we have
+
+$$\vec{\nabla} \times \bold{\vec{H}} = j\omega \epsilon_c \bold{\vec{E}}$$
+
+How would this affect our calculation?
+
+$$k_c = \sqrt{\mu \epsilon_c} \omega = k - j \alpha$$
+
+$$\eta_c = \sqrt{\frac{\mu}{\epsilon_c}}$$
+
+Looking back to our plane wave solution,
+
+$$e^{-jk_c z} = e^{-j (k - j\alpha)z} = e^{-jkz} e^{-\alpha z}$$
+
+It means that the wave attenuates as it travels because of the $e^{-\alpha z}$ term, and notice the complex intrinsic impedance introduces a phase shift between the E and H fields.
+
+For both the complex wave number and the intrinsic impedance, both are related a quantity called the "loss tangent" ($\delta_c$)
+
+$$tan (\delta_c) = \frac{\epsilon''}{\epsilon'}$$
+
+The more conductive a material is, the greater the $\sigma$, and the greater the $\epsilon''$.
+
+**Low Loss Dielectric**
+
+For low-loss dielectric, $\frac{\epsilon''}{\epsilon'} << 1$
+
+$$\alpha \approx \frac{\sigma}{2} \sqrt{\frac{\mu}{\epsilon'}}$$
+
+$$k = \omega \sqrt{\mu \epsilon'}$$
+
+$$\eta_c = \sqrt{\frac{\mu}{\epsilon'}}$$
+
+
+**Good Conductor**
+For good conductors, $\frac{\epsilon''}{\epsilon'} >> 1$
+
+$$\alpha = k \approx \sqrt{\frac{\mu \sigma \omega}{2}}$$
+
+$$\eta_c = (e^{j \frac{\pi}{4}}) \frac{\alpha}{\sigma} = (1 + j)\frac{\alpha}{\sigma}$$
+
+The E and H fields are 45 degrees out of phase.
+
+**Skin Depth**
+
+Tells us how deep the EM wave can penetrate a material without attenuation.
+
+## Power Carried by the EM Wave
+
+### Time Average Poynting Vector
+
+$$\vec{S}_{avg} = \frac{1}{2} Re\{\bold{\vec{E} \times \bold{\vec{H}^*}}\}$$
+
+$\vec{S}_{avg}$ is the power density and has the unit of watts per area squared.
+
+It points in the direction of the wave propagation.
+
+Specifically, for uniform plane wave propagating in the z direction in **lossless material**,
+
+$$\vec{S}_{avg} = \frac{1}{2\eta}(|E_{0x}|^2 + |E_{0y}|^2)\hat{z}$$
+
+More generally in **lossy material**,
+
+$$\vec{S}_{avg} = e^{-2\alpha z }cos(\theta_c) \frac{1}{2|\eta_c|}(|E_{0x}|^2 + |E_{0y}|^2)\hat{z}$$
+
+### Poynting's Theorem
+
+$$-\frac{d U_{EM}}{dt} = \frac{d W}{dt} + \oint (\vec{E} \times \vec{H}) d\vec{A}$$
+
+Total Energy of EM Field = Work Done on Charges + Energy Radiating Away
+
+## Reflection and Refraction
+
+Reflection Coefficient for EM wave that propagates from $\eta_1$ to $\eta_2$.
+
+$$\Gamma = \frac{\eta_2 - \eta_1}{\eta_2 + \eta_1}$$
 
 ## Conclusion
 
