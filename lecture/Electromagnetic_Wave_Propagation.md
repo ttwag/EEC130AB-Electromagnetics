@@ -504,11 +504,6 @@ $$-\frac{d U_{EM}}{dt} = \frac{d W}{dt} + \oint (\vec{E} \times \vec{H}) d\vec{A
 
 Total Energy of EM Field = Work Done on Charges + Energy Radiating Away
 
-## Reflection and Refraction
-
-Reflection Coefficient for EM wave that propagates from $\eta_1$ to $\eta_2$.
-
-$$\Gamma = \frac{\eta_2 - \eta_1}{\eta_2 + \eta_1}$$
 
 ## Conclusion
 
