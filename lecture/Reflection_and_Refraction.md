@@ -6,11 +6,11 @@ $$\Gamma = \frac{\eta_2 - \eta_1}{\eta_2 + \eta_1}$$
 
 To find out the reflection and refraction behavior of EM waves, we need to use the boundary condition of the E and H fields.
 
-## Reflection and Transmission
+## Normal Reflection and Transmission
 
-**Normal Incidence**: the wave vector k is perpendicular to the surface of the materials' boundary. 
+**Normal Incidence**: the wave vector k is **perpendicular** to the surface of the materials' boundary. 
 
-Assume that we have a uniform plane wave traveling in the z direction and passing from medium 1 to medium 2
+Assume that we have a uniform plane wave traveling in the z direction and pas\sing from medium 1 to medium 2
 
 | | Incident | Reflected | Transmitted |
 |---:| ---:|---:|---:|
@@ -41,14 +41,14 @@ Notice that the result is the same as those from the transmission line if we rep
 
 The transmission line could be thought of as a 1D EM Wave traveling from medium to medium.
 
-## Standing Wave
+### Standing Wave
 
 The incidence and reflected wave form a standing wave
 
 **Standing Wave Ratio**
 
 
-## Power Flow in Reflection and Transmission
+### Power Flow in Reflection and Transmission
 
 Power flow in medium 1
 
@@ -58,3 +58,92 @@ Power flow in medium 2
 
 $$\vec{S}_{av} =|\Gamma|^2 \frac{|E_0^i|}{2 \eta_2} \hat{z}$$
 
+## Oblique Reflection and Transmission
+
+The **refractive index** is defined as
+
+$$n = \sqrt{\epsilon_r \mu_r}$$
+
+Recall that the speed of EM wave propagation is $V_p = \frac{1}{\sqrt{\epsilon_r \epsilon_0 \mu_r \mu_0}}$, we can rewrite it as 
+
+$$V_p = \frac{c}{n}$$
+
+and for the wavelength
+
+$$\lambda = \frac{\lambda_0}{n}$$
+
+### What Happens When the Incident Wave Comes at an Angle?
+
+**Expectation 1:** The transmitted wave must travel at a different angle.
+
+![Figure18](./image/Figure18.png)
+
+That's because the wave should have a shorter wavelength in medium 2, resulting in shorter peaks and troughs. For the length of the peaks and troughs to match up at the boundary, the medium 2 wave must be at a **different angle** \since its peaks and troughs are shorter.
+
+**Expectation 2:** The orientation of the E field affects the oblique incidence. Notice that in the reflection below, the E field can point in the y direction (out of the page) or the x-z direction (in the plane). The out-of-page scenario is called the **perpendicular polarization** and the other is the **parallel polarization** because E fields point in different directions (different polarization).
+
+
+![Figure17](./image/Figure17.png)
+
+### Perpendicular Polarization
+
+**Reflection**
+$$\theta_i = \theta_r$$
+
+$$\Gamma_{\perp} = \frac{\eta_2 \space cos\space \theta_i - \eta_1 \space cos \space \theta_t}{\eta_2 \space cos \space \theta_i + \eta_1 \space cos \space \theta_t}$$
+
+**Refraction**
+
+$$\frac{\sin \space \theta_t}{\sin \space \theta_i} = \frac{n_1}{n_2}$$
+
+$$\tau_{\perp} = \frac{2 \eta_2\space cos\space \theta_i}{\eta_2 \space cos \space \theta_i + \eta_1 \space cos \theta_t}$$
+
+The reflection and transmission coefficients are related by
+
+$$\tau_{\perp} = 1 + \Gamma_{\perp}$$
+
+### Parallel Polarization
+
+$$\Gamma_{\parallel} = \frac{\eta_2 \space cos\space \theta_t - \eta_1 \space cos \space \theta_i}{\eta_2 \space cos \space \theta_t + \eta_1 \space cos \space \theta_i}$$
+
+$$\tau_{\parallel} = \frac{2 \eta_2\space cos\space \theta_i}{\eta_2 \space cos \space \theta_t + \eta_1 \space cos \theta_i}$$
+
+$$\tau_{\parallel} = (1 + \Gamma_{\parallel})\frac{cos \space \theta_i}{cos \space \theta_t}$$
+
+**The tangential component of the incident, reflected, and transmitted electric field should be in the same direction.**
+
+### Brewster's Angle
+
+The Brewster's Angle is the incident wave angle that results in no reflection of the incident wave, and it's different for the parallel and perpendicular polarizations of the Electric field.
+
+**Parallel Polarization**
+$$tan \space \theta_B = \sqrt{\frac{\epsilon_2}{\epsilon_1}}$$
+
+**Perpendicular Polarization**
+
+$$\sin \space \theta_B = \sqrt{\frac{1-\Big( \frac{\mu_1 \epsilon_2}{\mu_2 \epsilon_1}\Big)}{1- \Big( \frac{\mu_1}{\mu_2}\Big)^2}}$$
+
+### Total Internal Reflection
+
+$$\theta_t = 90 ^ \circ\$$
+
+$$\sin \space \theta_t = \frac{n_1}{n_2} \sin \space \theta_i$$
+$$\implies \sin \space 90^\circ = \frac{n_1}{n_2} \sin \space \theta_i$$
+$$\implies 1 = \frac{n_1}{n_2} \sin \space \theta_c$$
+
+$\theta_c$ is the critical angle that causes total internal reflection
+
+## Multiple Interfaces
+
+When a wave travels from one medium to another medium, its wavelength and phase velocity change.
+
+At normal incidence, this reflection and transmission problem maps directly to the transmission line and forms a standing wave with the incidence wave.
+
+If we extend the idea of shrinking the transmission line into a lumped circuit element, we have:
+
+$$\eta(d) = \frac{\widetilde{E}_{x}}{\widetilde{H}_y} = \eta_2 \Big( \frac{\eta_0 + j \eta_2 \tan k_2 d}{\eta_2 + j \eta_0 \tan k_2 d}\Big)$$
+
+When a transmission line is infinite without bound, it could be seen as a lumped impedance equal to the characteristics impedance because an infinite transmission won't have a reflection.
+
+
+## Waveguides
