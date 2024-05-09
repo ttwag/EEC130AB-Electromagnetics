@@ -133,7 +133,7 @@ $$\implies 1 = \frac{n_1}{n_2} \sin \space \theta_c$$
 
 $\theta_c$ is the critical angle that causes total internal reflection
 
-## Multiple Interfaces
+### Multiple Interfaces
 
 When a wave travels from one medium to another medium, its wavelength and phase velocity change.
 
@@ -143,7 +143,34 @@ If we extend the idea of shrinking the transmission line into a lumped circuit e
 
 $$\eta(d) = \frac{\widetilde{E}_{x}}{\widetilde{H}_y} = \eta_2 \Big( \frac{\eta_0 + j \eta_2 \tan k_2 d}{\eta_2 + j \eta_0 \tan k_2 d}\Big)$$
 
-When a transmission line is infinite without bound, it could be seen as a lumped impedance equal to the characteristics impedance because an infinite transmission won't have a reflection.
+When a transmission line is infinite without bound, it could be seen as a lumped impedance equal to the characteristic impedance because an infinite transmission won't have a reflection.
 
 
-## Waveguides
+## Parallel Plate Waveguides
+
+If we have an EM wave incident on a perfect conductor, $\Gamma = -1$ regardless of the incident angle.
+
+Depending on the polarization of the electric field, there will be different solutions to wave in the waveguide.
+
+### Transverse Electric Mode
+
+The electric field phasor of EM wave traveling toward z inside a perfectly conducting waveguide:
+
+$$\bold{\widetilde{E}(x, z)} = \hat{j} E_{0}^i 2 j e^{- j k_z z} \sin (k_x x)$$
+
+Notice that if we fix z, we have a standing wave across x. If we fix x, we have a wave traveling toward +z.
+
+The phasor forms a grid-like pattern moving toward +z. When two metallic plate waveguides are placed at the axis, the wave doesn't exist outside of the waveguide. 
+
+If the distance between the metallic plates is d, $\sin(k_x x) = 0$ because the E field must be 0 at the boundary, so $k_x d = n \pi$ or $$(\frac{m \pi}{d})^2 + k_z ^2 = \epsilon \mu_0 \omega^2$$
+
+**Dispersion**
+
+We can rearrange the equation above into:
+
+$$k_z = \sqrt{\mu_0 \epsilon \omega^2 - (\frac{m \pi}{d})^2}$$
+
+The cut-off frequency occurs when $k_z = 0$
+
+* Attenuation: $\mu_0 \epsilon \omega^2 < (\frac{m \pi}{d})^2$ means $k_z$ is imaginary and there's loss.
+
