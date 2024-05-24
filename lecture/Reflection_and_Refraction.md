@@ -1,5 +1,7 @@
 # EM Wave Reflection and Refraction
 
+
+
 Reflection Coefficient for EM wave that propagates from $\eta_1$ to $\eta_2$.
 
 $$\Gamma = \frac{\eta_2 - \eta_1}{\eta_2 + \eta_1}$$
@@ -43,7 +45,7 @@ The transmission line could be thought of as a 1D EM Wave traveling from medium 
 
 ### Standing Wave
 
-The incidence and reflected wave form a standing wave
+The incidence and reflected waveform a standing wave
 
 **Standing Wave Ratio**
 
@@ -52,11 +54,11 @@ The incidence and reflected wave form a standing wave
 
 Power flow in medium 1
 
-$$\vec{S}_{av} = \Big(\frac{|E_0^i|}{2 \eta_1} - |\Gamma|^2 \frac{|E_0^i|}{2 \eta_1} \Big)\hat{z}$$
+$$\vec{S}_{av} = \Big(\frac{|E_0^i|^2}{2 \eta_1} - |\Gamma|^2 \frac{|E_0^i|^2}{2 \eta_1} \Big)\hat{z}$$
 
 Power flow in medium 2
 
-$$\vec{S}_{av} =|\Gamma|^2 \frac{|E_0^i|}{2 \eta_2} \hat{z}$$
+$$\vec{S}_{av} =|\tau|^2 \frac{|E_0^i|^2}{2 \eta_2} \hat{z}$$
 
 ## Oblique Reflection and Transmission
 
@@ -85,16 +87,23 @@ That's because the wave should have a shorter wavelength in medium 2, resulting 
 
 ![Figure17](./image/Figure17.png)
 
+### Reflection and Refraction Angle
+
+$$\theta_i = \theta_r$$
+
+$$\frac{\sin \space \theta_t}{\sin \space \theta_i} = \frac{n_1}{n_2}$$
+
+When the refracted angle $\theta_t$ is undefined, we have a total internal reflection.
+
 ### Perpendicular Polarization
 
 **Reflection**
-$$\theta_i = \theta_r$$
+
 
 $$\Gamma_{\perp} = \frac{\eta_2 \space cos\space \theta_i - \eta_1 \space cos \space \theta_t}{\eta_2 \space cos \space \theta_i + \eta_1 \space cos \space \theta_t}$$
 
 **Refraction**
 
-$$\frac{\sin \space \theta_t}{\sin \space \theta_i} = \frac{n_1}{n_2}$$
 
 $$\tau_{\perp} = \frac{2 \eta_2\space cos\space \theta_i}{\eta_2 \space cos \space \theta_i + \eta_1 \space cos \theta_t}$$
 
@@ -146,31 +155,4 @@ $$\eta(d) = \frac{\widetilde{E}_{x}}{\widetilde{H}_y} = \eta_2 \Big( \frac{\eta_
 When a transmission line is infinite without bound, it could be seen as a lumped impedance equal to the characteristic impedance because an infinite transmission won't have a reflection.
 
 
-## Parallel Plate Waveguides
-
-If we have an EM wave incident on a perfect conductor, $\Gamma = -1$ regardless of the incident angle.
-
-Depending on the polarization of the electric field, there will be different solutions to wave in the waveguide.
-
-### Transverse Electric Mode
-
-The electric field phasor of EM wave traveling toward z inside a perfectly conducting waveguide:
-
-$$\bold{\widetilde{E}(x, z)} = \hat{j} E_{0}^i 2 j e^{- j k_z z} \sin (k_x x)$$
-
-Notice that if we fix z, we have a standing wave across x. If we fix x, we have a wave traveling toward +z.
-
-The phasor forms a grid-like pattern moving toward +z. When two metallic plate waveguides are placed at the axis, the wave doesn't exist outside of the waveguide. 
-
-If the distance between the metallic plates is d, $\sin(k_x x) = 0$ because the E field must be 0 at the boundary, so $k_x d = n \pi$ or $$(\frac{m \pi}{d})^2 + k_z ^2 = \epsilon \mu_0 \omega^2$$
-
-**Dispersion**
-
-We can rearrange the equation above into:
-
-$$k_z = \sqrt{\mu_0 \epsilon \omega^2 - (\frac{m \pi}{d})^2}$$
-
-The cut-off frequency occurs when $k_z = 0$
-
-* Attenuation: $\mu_0 \epsilon \omega^2 < (\frac{m \pi}{d})^2$ means $k_z$ is imaginary and there's loss.
 
