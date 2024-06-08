@@ -116,6 +116,8 @@ $$\vec{E}(x, y, z, t) = Re{ \widetilde{\mathbf{E}}(x, y, z) e^{j \omega t}}$$
 
 $$\vec{E}(x, y, z, t) = \text{Re} \{ \widetilde{\mathbf{E}}(x, y, z) e^{j \omega t} \}$$
 
+$$\vec{E}(x, y, z, t) = \mathrm{Re} \{ \widetilde{\mathbf{E}}(x, y, z) e^{j \omega t} \}$$
+
 
 $$\vec{H}(x, y, z, t) = Re \{ \bold{\vec{H}}(x, y, z) e^{j \omega t}\}$$
 
