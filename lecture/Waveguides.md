@@ -56,13 +56,14 @@ $$\omega_{cm} = \frac{1}{\sqrt{\mu \epsilon}} \frac{m \pi}{d}$$
 
 * Attenuation: $\mu_0 \epsilon \omega^2 < (\frac{m \pi}{d})^2$ means $k_z$ is imaginary and there's loss.
 * The single mode regime must be between $\omega_{c1}$ and $\omega_{c2}$.
+* If transmit an EM wave of frequency $\omega$ and want it to propagate in mode $m$ without loss, $\omega$ should be larger than the cut-off frequency of $m$ so that $k_z$ is not a complex number that introduces loss to the wave.
 
 
 ### Transverse Magnetic (TM) Mode
 
 The magnetic field is perpendicular to the plane of propagation and the E field is in parallel to it. The TM Mode has a similar wave solution to that of the TE mode, and the dispersion relation is identical.
 
-$$\bold{\widetilde{E}}(x, z) = \frac{-j H_0}{\omega \epsilon}(-\hat{z} \frac{m \pi}{d} \sin\Big(\frac{m \pi}{d}x\Big) + \hat{x} j k_z \cos\Big(\frac{m \pi}{d}x\Big))e^{-j k_z z}$$
+$$\bold{\widetilde{E}}(x, z) = \frac{-j H_0}{\omega \epsilon}\Bigg(-\hat{z} \frac{m \pi}{d} \sin\Big(\frac{m \pi}{d}x\Big) + \hat{x} j k_z \cos\Big(\frac{m \pi}{d}x\Big)\Bigg)e^{-j k_z z}$$
 
 where m is any positive integer, including 0.
 
@@ -77,14 +78,11 @@ The m = 0 solution is special such that it only exists for TM mode because TM mo
 
 The parallel-plate waveguide is not realistic because it's infinite in one dimension. Therefore, we will look at the rectangular waveguides, where the wave is confined in the x and y directions.
 
-$TM_{mn}$
-$$\widetilde{E}_z = E_0 \sin\Big(\frac{m \pi}{a}x\Big) \sin\Big(\frac{n \pi}{b}y \Big) e^{-jk_z z}$$
+![Figure24](./image/Figure24.png)
 
-$TE_{mn}$
+![Figure23](./image/Figure23.png)
 
-$$\widetilde{E}_x = E_{0x} \cos\Big(\frac{m \pi}{a}x\Big) \sin\Big(\frac{n \pi}{b}y \Big) e^{-jk_z z}$$
-
-$$\widetilde{E}_y = E_{0y} \sin\Big(\frac{m \pi}{a}x\Big) \cos\Big(\frac{n \pi}{b}y \Big) e^{-jk_z z}$$
+$$k_c ^2= k_x ^2 + k_y ^2$$
 
 **Dispersion Relation**
 
@@ -93,11 +91,6 @@ $$(\frac{m \pi}{a})^2 + (\frac{n \pi}{b})^2 + k_z ^2 = \epsilon \mu \omega^2$$
 When $k_z = 0,$
 
 $$\omega_{cut-off \space m, n} = \frac{1}{\sqrt{\mu \epsilon}} \sqrt{(\frac{m \pi}{a})^2 + (\frac{n \pi}{b})^2}$$
-
-The impedance that relates the magnetic and electric phasor.
-
-<!-- Change -->
-$$Z_{TM} = \frac{\eta}{\sqrt{1-(\frac{f_{cut-off}}{f})^2}}$$
 
 ## Dielectric Slab Wave Guide
 
@@ -127,9 +120,12 @@ $$\bold{\Gamma = 1}$$
 
 <!-- Evanescent Wave -->
 
+### Dielectric Slab Waveguide
+
+For this waveguide to work, $\epsilon_1 > \epsilon_2$ because the total internal reflection occurs when $\sin(\theta_t) = \frac{n_1}{n_2} \sin(\theta_i)$
+
+
 ![Figure22](./image/Figure22.png)
-
-
 
 $\bold{\widetilde{E}}$ in $\epsilon_1$
 
@@ -139,5 +135,10 @@ $\bold{\widetilde{E}}$ in $\epsilon_2$
 
 $$\bold{\widetilde{E}} = \hat{y} \tau E_0 ^ i e^{-j (j a_x x + k_z z)}$$
 
-<!-- The Solution after applying boundary condition -->
+The cut-off frequency of the dielectric slab waveguide:
+
+$$\omega_{c} = \frac{(m-1) \pi}{2d} \frac{1}{\sqrt{\mu_0 (\epsilon_1 - \epsilon_2)}}$$
+
+
+
 
