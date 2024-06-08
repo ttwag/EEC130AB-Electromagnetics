@@ -1,8 +1,8 @@
 # Electromagnetic Wave Propagation
 
-In the transmission line section, we looked at wave propagation in 1 spatial coordinate. Here, we will look at 3D waves.
+In the transmission line section, we looked at wave propagation in 1 spatial coordinate. Here, we will build on our knowledge of Maxwell's Equation and model the EM wave propagating in any direction.
 
-## Maxwell's Equation
+## 1. Maxwell's Equation
 
 **Integral Form**
 
@@ -30,27 +30,7 @@ where $\mu_0 \epsilon_0 \frac{d \phi_E}{dt}$ is the displacement current.
 
 ![Figure14](./image/Figure14.png)
 
-## Parallel Between the Transmission Line to Free Space
-
-1-D Voltage and Current waves now turn to Electric and Magnetic field waves.
-
-$$v(z, t) \implies \vec{E}(x, y, z, t)$$
-
-$$i(z, t) \implies \vec{H}(x, y, z, t)$$
-
-In source free ($\rho = 0, \vec{J} = 0$) vacuum, we have 
-
-$$\vec{\nabla} \times \vec{E} = -\mu_0 \frac{\partial \vec{H}}{\partial t}$$
-
-$$\vec{\nabla} \times \vec{H} = \epsilon_0 \frac{\partial \vec{E}}{\partial t}$$
-
-which parallels to the lossless voltage and current PDE seen in the transmission line section, where
-
-$$\frac{\partial v(z, t)}{\partial z} = - L'\frac{d i(z, t)}{d t}$$
-
-$$\frac{\partial i(z, t)}{\partial z} = - C' \frac{dv(z, t)}{dt}$$
-
-### Plane Wave Solution
+## 2. Uniform Plane Wave Solution
 
 Assume $\vec{E} = E_x(z, t) \hat{x}$ and $\vec{H} = H_y(z, t) \hat{y}$, so they are constant in planes of constant z with medium $\epsilon$ and $\mu$.
 
@@ -89,7 +69,7 @@ $$H_y = \frac{E_0}{\eta} cos(\omega t - k z)$$
 
 k is the wave number, $\frac{2 \pi}{\lambda}$
 
-## Intrinsic Impedance
+### Intrinsic Impedance
 
 The Intrinsic Impedance relates the magnitude of E field to B field, just like the Characteristic Impedance relates the voltage and the current.
 
@@ -105,10 +85,29 @@ In vacuum,
 
 $$\eta_0 = \sqrt{\frac{\mu_0}{\epsilon_0}} = 377 \space \Omega$$
 
+### Parallel Between the Transmission Line to Free Space
 
-## Phasors and Maxwell's Equations
+1-D Voltage and Current waves now turn to Electric and Magnetic field waves.
 
-**Maxwell's Equations in Phasor Domain**
+$$v(z, t) \implies \vec{E}(x, y, z, t)$$
+
+$$i(z, t) \implies \vec{H}(x, y, z, t)$$
+
+In source free ($\rho = 0, \vec{J} = 0$) vacuum, we have 
+
+$$\vec{\nabla} \times \vec{E} = -\mu_0 \frac{\partial \vec{H}}{\partial t}$$
+
+$$\vec{\nabla} \times \vec{H} = \epsilon_0 \frac{\partial \vec{E}}{\partial t}$$
+
+which parallels to the lossless voltage and current PDE seen in the transmission line section, where
+
+$$\frac{\partial v(z, t)}{\partial z} = - L'\frac{d i(z, t)}{d t}$$
+
+$$\frac{\partial i(z, t)}{\partial z} = - C' \frac{dv(z, t)}{dt}$$
+
+## 3. Phasors and Maxwell's Equations
+
+### Maxwell's Equations in Phasor Domain
 
 If the time variation of the E and B field is sinusoidal with frequency $\omega$, then we can write the E and B field as:
 
@@ -116,13 +115,12 @@ $$\vec{E}(x, y, z, t) = Re{ \widetilde{\mathbf{E}}(x, y, z) e^{j \omega t}}$$
 
 $$\vec{E}(x, y, z, t) = \text{Re} \\{ \widetilde{\mathbf{E}}(x, y, z) e^{j \omega t}\\}$$
 
-
-$$\vec{H}(x, y, z, t) = Re \{ \bold{\vec{H}}(x, y, z) e^{j \omega t}\}$$
+$$\vec{H}(x, y, z, t) = \text{Re} \\{ \widetilde{\mathbf{H}}(x, y, z) e^{j \omega t}\\}$$
 
 where $\bold{\vec{E}}$ and $\bold{\vec{H}}$ are the E and B field phasors with vector quantity.
 
 We can put the source-free Maxwell's Equation into the phasor domain by swapping the time derivatives with $j \omega$ and vectors with phasors.
-
+<!-- Change -->
 $$\vec{\nabla} \cdot \bold{\vec{E}} = 0$$
 
 $$\vec{\nabla} \times \bold{\vec{E}} = -\mu j\omega \bold{\vec{H}}$$
@@ -131,8 +129,9 @@ $$\vec{\nabla} \cdot \bold{\vec{H}} = 0$$
 
 $$\vec{\nabla} \times \bold{\vec{H}} = \epsilon j\omega \bold{\vec{E}}$$
 
-**Plain EM Wave in Phasor Domain**
+### Plain EM Wave in Phasor Domain
 
+<!-- Change -->
 Recall that the plain wave solutions are
 
 $$\vec{E} = E_0 cos(\omega t - kz) \hat{x}$$
@@ -151,7 +150,7 @@ $$\bold{\vec{E}} = E_0 e^{-jkz} \hat{x}$$
 
 $$\bold{\vec{H}} = \frac{E_0}{\eta} e^{-jkz} \hat{y}$$
 
-## Time-Harmonic Plane Waves in Any Direction
+## 4. Time-Harmonic Plane Waves in Any Direction
 
 **E Field**
 
@@ -181,7 +180,7 @@ $$\bold{\vec{E}}_0 = \bold{E}_{0x}\hat{x} + \bold{E}_{0y}\hat{y} + \bold{E}_{0z}
 
 **Note that each component could be a complex number that carries a phase as well. They could also vary spatially.**
 
-**Wave Vector**
+### Wave Vector
 
 We will introduce a vector, the **wave vector**, which is 
 
@@ -211,8 +210,6 @@ $$\bold{\vec{E}}(\vec{r}) = -\eta \hat{k} \times \bold{\vec{H}}(\vec{r})$$
 
 **Geometric Restriction**
 
-
-
 If we recall the Maxwell Equation in phasor form,
 
 $$\vec{\nabla} \cdot \bold{\vec{E}} = 0$$
@@ -241,7 +238,7 @@ $$\bold{\vec{E}} \perp \bold{\vec{H}} $$
 
 When $\vec{k} \cdot \vec{r}$ is constant, or $\vec{k} \cdot \vec{r}_1 = \vec{k} \cdot \vec{r}_2$, there's a plane perpendicular to $\vec{k}$ where the field is constant (**Uniform**). However, the field can change from plane to plane.
 
-## Wave Polarization of a Uniform Plane Wave
+## 5. Wave Polarization of a Uniform Plane Wave
 
 The polarization of a **uniform plane wave** describes the locus (collection of point) traced by the tip of the $\vec{E}$ vector (in the plane orthogonal to propagation) at a given point in space as a function of time.
 
@@ -270,13 +267,13 @@ $$= \hat{x} a_x cos(\omega t - k_z z) + \hat{y} a_y cos(\omega t - k_z + \delta)
 $$= \hat{x}E_x(z, t) + \hat{y}E_{y}(z, t)$$
 Two quantities describe the wave polarization:
 
-**Magnitude**
+### Magnitude
 
 $$\vec{E}(z = z_0, t) = \sqrt{E_x(z, t)^2 + E_y(z, t)^2}$$
 
 where $z_0$ is a constant
 
-**Inclination Angle**
+### Inclination Angle
 
 $$\psi (z = z_0, t) = arctan\Big(\frac{E_y(z, t)}{E_x(z, t)}\Big)$$
 
@@ -306,7 +303,7 @@ $$|\vec{E}(z = z_0, t)| = \sqrt{a_x^2 + a_y^2}cos(\omega t)$$
 $$\psi (z = z_0, t) = arctan\Big(\frac{a_y}{a_x}\Big)$$
 
 
-## Left-Hand Circular Polarization (LHC)
+### Left-Hand Circular Polarization (LHC)
 
 ![Figure15](./image/Figure15.png)
 
@@ -332,7 +329,7 @@ $$\psi (z = 0, t) = arctan\Big(\frac{-a\space sin(\omega t)}{a\space cos(\omega 
 
 Notice that the magnitude of the vector is the same, but the angle decreases with time, so it rotates in the **clockwise** direction.
 
-## Right-Hand Circular Polarization (RHC)
+### Right-Hand Circular Polarization (RHC)
 
 $\vec{E}(z, t)$ traces out a circle in the counter-clockwise direction.
 
@@ -346,7 +343,7 @@ $$|\vec{E}(z = 0, t)| = a$$
 
 $$\psi (z = 0, t) = \omega t$$
 
-## Elliptical Polarization
+### Elliptical Polarization
 
 The electric field vector traces out an ellipse in the plane perpendicular to propagation.
 
@@ -396,7 +393,7 @@ $$0 \leq \psi_0 \leq \frac{\pi}{2}$$
 
 
 
-## Material Property
+## 6. Material Property
 * Nonmagnetic material means $\mu_r = 1$ and $\mu = \mu_0$
 * Vacuum means $\epsilon = \epsilon_0$ and $\mu = \mu_0$
 * The frequency of an EM wave is constant regardless of the material it's in. 
@@ -483,7 +480,9 @@ The E and H fields are 45 degrees out of phase.
 
 Tells us how deep the EM wave can penetrate a material without attenuation.
 
-## Power Carried by the EM Wave
+$$\delta_s = \frac{1}{\alpha}$$
+
+## 7. Power Carried by the EM Wave
 
 ### Time Average Poynting Vector
 
@@ -506,9 +505,4 @@ $$\vec{S}_{avg} = e^{-2\alpha z }cos(\theta_c) \frac{1}{2|\eta_c|}(|E_{0x}|^2 + 
 $$-\frac{d U_{EM}}{dt} = \frac{d W}{dt} + \oint (\vec{E} \times \vec{H}) d\vec{A}$$
 
 Total Energy of EM Field = Work Done on Charges + Energy Radiating Away
-
-
-## Conclusion
-
-**Insert a Table**
 
