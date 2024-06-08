@@ -486,7 +486,7 @@ $$\delta_s = \frac{1}{\alpha}$$
 
 ### Time Average Poynting Vector
 
-$$\vec{S}_{avg} = \frac{1}{2} Re\{\mathbf{\widetilde{E} \times \mathbf{\widetilde{H}^*}}\}$$
+$$\vec{S}_{avg} = \frac{1}{2} \text{Re}\\{\mathbf{\widetilde{E} \times \mathbf{\widetilde{H}^*}}\\}$$
 
 $\vec{S}_{avg}$ is the power density and has the unit of watts per area squared.
 
