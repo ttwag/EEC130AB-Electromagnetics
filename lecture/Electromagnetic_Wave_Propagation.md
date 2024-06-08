@@ -152,7 +152,7 @@ $$\widetilde{\mathbf{E}} = E_0 e^{-jkz} \hat{x}$$
 
 $$\widetilde{\mathbf{H}} = \frac{E_0}{\eta} e^{-jkz} \hat{y}$$
 
-## 4. Time-Harmonic Plane Waves in Any Direction
+## 4. Time-Harmonic Uniform Plane Waves in Any Direction
 
 **E Field**
 
@@ -218,7 +218,7 @@ $$\vec{\nabla} \cdot \widetilde{\mathbf{E}} = 0$$
 
 $$\implies (\frac{\partial}{\partial x}\hat{x} + \frac{\partial}{\partial y}\hat{y} + \frac{\partial}{\partial z}\hat{z}) \cdot \widetilde{\mathbf{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)} = 0$$
 
-$$\implies -(jk_x)E_{0x}e^{-j(k_x x+ k_y y+ k_z z)} -(jk_y)E_{0y}e^{-j(k_x x+ k_y y+ k_z z)} -(jk_z)E_{0z}e^{-j(k_x x+ k_y y+ k_z z)} = 0$$
+$$\implies -(jk_x)\widetilde{E}_{0x}e^{-j(k_x x+ k_y y+ k_z z)} -(jk_y)\widetilde{E}_{0y}e^{-j(k_x x+ k_y y+ k_z z)} -(jk_z)E_{0z}e^{-j(k_x x+ k_y y+ k_z z)} = 0$$
 
 $$\implies (-j)(\vec{k} \cdot \widetilde{\mathbf{E}}) = 0$$
 
@@ -227,17 +227,17 @@ Similarly,
 $$(-j)(\vec{k} \cdot \mathbf{\widetilde{H}}) = 0$$
 
 We can conclude that 
-<!-- Change -->
-$$\vec{k} \perp \bold{\vec{E}} $$
 
-$$\vec{k} \perp \bold{\vec{H}} $$
+$$\vec{k} \perp \mathbf{\widetilde{E}} $$
+
+$$\vec{k} \perp \mathbf{\widetilde{H}} $$
 
 From the cross-product definition of the E and H fields, we further know that
 
-$$\bold{\vec{E}} \perp \bold{\vec{H}} $$
+$$\mathbf{\widetilde{E}} \perp \mathbf{\widetilde{H}} $$
 
 **Intuition**
-<!-- Change -->
+
 When $\vec{k} \cdot \vec{r}$ is constant, or $\vec{k} \cdot \vec{r}_1 = \vec{k} \cdot \vec{r}_2$, there's a plane perpendicular to $\vec{k}$ where the field is constant (**Uniform**). However, the field can change from plane to plane.
 
 ## 5. Wave Polarization of a Uniform Plane Wave
@@ -250,17 +250,17 @@ Assumptions:
 
 Since the wave vector points to the z direction, the E field must lie in the x-y plane, where polarization occurs.
 <!-- Change -->
-$$\bold{\vec{E}}(x, y, z) = \bold{\vec{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)} = (\bold{E_{0x}}\hat{x} + \bold{E_{0y}}\hat{y})e^{-j (k_z z)}$$
+$$\mathbf{\widetilde{E}}(x, y, z) = \mathbf{\widetilde{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)} = (\widetilde{E}_{0x}\hat{x} + \widetilde{E}_{0y}\hat{y})e^{-j (k_z z)}$$
 
-$$\bold{\vec{E}}(z) = \hat{x} E_{0x} e^{-jk_z z} + \hat{y} E_{0y} e^{-jk_z z}$$
+$$\mathbf{\widetilde{E}}(z) = \hat{x} \widetilde{E}_{0x} e^{-jk_z z} + \hat{y} \widetilde{E}_{0y} e^{-jk_z z}$$
 
-Let $E_{0x} = a_x$ and $E_{0y} = a_ye^{j\delta}$,
+Let $\widetilde{E}_{0x} = a_x$ and $\widetilde{E}_{0y} = a_ye^{j\delta}$,
 
-$$\bold{\vec{E}}(z) = (\hat{x} a_x + \hat{y} a_y e^{j \delta})e^{-jk_z z}$$
+$$\mathbf{\widetilde{E}}(z) = (\hat{x} a_x + \hat{y} a_y e^{j \delta})e^{-jk_z z}$$
 
 In the time domain:
 
-$$\vec{E}(z, t) = Re\{\bold{\vec{E}}(z)e^{j\omega t}\}$$
+$$\vec{E}(z, t) = \text{Re} \\{\mathbf{\widetilde{E}}(z)e^{j\omega t}\\}$$
 
 $$= \hat{x} a_x cos(\omega t - k_z z) + \hat{y} a_y cos(\omega t - k_z + \delta)$$
 
@@ -269,13 +269,13 @@ Two quantities describe the wave polarization:
 
 ### Magnitude
 
-$$\vec{E}(z = z_0, t) = \sqrt{E_x(z, t)^2 + E_y(z, t)^2}$$
+$$\vec{E}(z = z_0, t) = \sqrt{E_{x}^2(z, t) + E_{y}^2(z, t)}$$
 
 where $z_0$ is a constant
 
 ### Inclination Angle
 
-$$\psi (z = z_0, t) = arctan\Big(\frac{E_y(z, t)}{E_x(z, t)}\Big)$$
+$$\psi (z = z_0, t) = \arctan\Bigg(\frac{E_y(z, t)}{E_x(z, t)}\Bigg)$$
 
 
 ### Linear Polarization
@@ -283,24 +283,24 @@ $$\psi (z = z_0, t) = arctan\Big(\frac{E_y(z, t)}{E_x(z, t)}\Big)$$
 $\vec{E}(z, t)$ traces out a line
 
 Consider $\delta = 0$ or $\delta = \pi$,
-<!-- Change -->
-$$\bold{\vec{E}}(z) = (\hat{x} a_x + \hat{y} a_y e^{j \delta})e^{-jk_z z}$$
+
+$$\mathbf{\widetilde{E}}(z) = (\hat{x} a_x + \hat{y} a_y e^{j \delta})e^{-jk_z z}$$
 
 $$= (\hat{x} a_x \pm \hat{y} a_y)e^{-jk_z z}$$
 
 In the time domain at a fixed position, 
 
-$$\vec{E}(z = z_0, t) = (\hat{x} a_x \pm \hat{y} a_y)cos(\omega t)$$
+$$\vec{E}(z = z_0, t) = (\hat{x} a_x \pm \hat{y} a_y) \cos(\omega t)$$
 
 where $z_0$ is a constant.
 
 **Magnitude**
 
-$$|\vec{E}(z = z_0, t)| = \sqrt{a_x^2 + a_y^2}cos(\omega t)$$
+$$|\vec{E}(z = z_0, t)| = \sqrt{a_x^2 + a_y^2} \space \cos(\omega t)$$
 
 **Inclination Angle**
 
-$$\psi (z = z_0, t) = arctan\Big(\frac{a_y}{a_x}\Big)$$
+$$\psi (z = z_0, t) = \arctan\Big(\frac{a_y}{a_x}\Big)$$
 
 
 ### Left-Hand Circular Polarization (LHC)
@@ -310,18 +310,18 @@ $$\psi (z = z_0, t) = arctan\Big(\frac{a_y}{a_x}\Big)$$
 $\vec{E}(z, t)$ traces out a circle in the clockwise direction.
 
 Consider $\delta = \frac{\pi}{2}$ and $a_x = a_y = a$,
-<!-- Change -->
-$$\bold{\vec{E}}(z) = (\hat{x} a + \hat{y} a e^{j \frac{\pi}{2}})e^{-jk_z z} = (\hat{x} a + \hat{y}aj)e^{-jkz}$$
+
+$$\mathbf{\widetilde{E}}(z) = (\hat{x} a + \hat{y} a e^{j \frac{\pi}{2}})e^{-jk_z z} = (\hat{x} a + \hat{y}aj)e^{-jkz}$$
 
 In the time domain, 
-<!-- Change -->
-$$\vec{E}(z, t) = Re\{\bold{\vec{E}}(z)e^{j\omega t}\} = \hat{x}a \space cos(\omega t - k_z z) + \hat{y} a \space cos(\omega t - k_z z + \frac{\pi}{2})$$
 
-$$= \hat{x}a \space cos(\omega t - k_z z) - \hat{y} a \space sin(\omega t - k_z z)$$
+$$\vec{E}(z, t) = \text{Re}\\{\mathbf{\widetilde{E}}(z)e^{j\omega t}\\} = \hat{x}a \cos(\omega t - k_z z) + \hat{y} a \cos(\omega t - k_z z + \frac{\pi}{2})$$
+
+$$= \hat{x}a \cos(\omega t - k_z z) - \hat{y} a \sin(\omega t - k_z z)$$
 
 **Magnitude**
 
-$$|\vec{E}(z = 0, t)| = \sqrt{a^2 cos^2(\omega t) + a^2 sin^2(\omega t)} = a$$
+$$|\vec{E}(z = 0, t)| = \sqrt{a^2 \cos^2(\omega t) + a^2 \sin^2(\omega t)} = a$$
 
 **Inclination Angle**
 
@@ -427,16 +427,16 @@ In a conductor, ohm's law applies
 $$\vec{J} = \sigma \vec{E}$$
 
 Therefore, we cannot assume the wave is traveling in the source-free medium. So the curl of H field becomes:
-<!-- Change -->
-$$\vec{\nabla} \times \bold{\vec{H}} = \sigma \bold{\vec{E}} + j\omega \epsilon \bold{\vec{E}}$$
 
-$$\implies \vec{\nabla} \times \bold{\vec{H}} = (\sigma + j\omega \epsilon )\bold{\vec{E}}$$
+$$\vec{\nabla} \times \mathbf{\widetilde{H}} = \sigma \mathbf{\widetilde{E}} + j\omega \epsilon \mathbf{\widetilde{E}}$$
 
-$$\implies \vec{\nabla} \times \bold{\vec{H}} = j \omega (\frac{\sigma}{j \omega} + \epsilon )\bold{\vec{E}}$$
+$$\implies \vec{\nabla} \times \mathbf{\widetilde{H}} = (\sigma + j\omega \epsilon )\mathbf{\widetilde{E}}$$
+
+$$\implies \vec{\nabla} \times \mathbf{\widetilde{H}} = j \omega (\frac{\sigma}{j \omega} + \epsilon )\mathbf{\widetilde{E}}$$
 
 In a conductor, let $\epsilon_c = \epsilon + \frac{\sigma}{j \omega} = \epsilon' - j \epsilon''$, we have
 
-$$\vec{\nabla} \times \bold{\vec{H}} = j\omega \epsilon_c \bold{\vec{E}}$$
+$$\vec{\nabla} \times \mathbf{\widetilde{H}} = j\omega \epsilon_c \mathbf{\widetilde{E}}$$
 
 How would this affect our calculation?
 
@@ -485,8 +485,8 @@ $$\delta_s = \frac{1}{\alpha}$$
 ## 7. Power Carried by the EM Wave
 
 ### Time Average Poynting Vector
-<!-- Change -->
-$$\vec{S}_{avg} = \frac{1}{2} Re\{\bold{\vec{E} \times \bold{\vec{H}^*}}\}$$
+
+$$\vec{S}_{avg} = \frac{1}{2} Re\{\mathbf{\widetilde{E} \times \mathbf{\widetilde{H}^*}}\}$$
 
 $\vec{S}_{avg}$ is the power density and has the unit of watts per area squared.
 
@@ -494,11 +494,11 @@ It points in the direction of the wave propagation.
 
 Specifically, for uniform plane wave propagating in the z direction in **lossless material**,
 
-$$\vec{S}_{avg} = \frac{1}{2\eta}(|E_{0x}|^2 + |E_{0y}|^2)\hat{z}$$
+$$\vec{S}_{avg} = \frac{1}{2\eta}(|\widetilde{E}_{0x}|^2 + |\widetilde{E}_{0y}|^2)\hat{z}$$
 
 More generally in **lossy material**,
 
-$$\vec{S}_{avg} = e^{-2\alpha z }cos(\theta_c) \frac{1}{2|\eta_c|}(|E_{0x}|^2 + |E_{0y}|^2)\hat{z}$$
+$$\vec{S}_{avg} = e^{-2\alpha z }cos(\theta_c) \frac{1}{2|\eta_c|}(|\widetilde{E}_{0x}|^2 + |\widetilde{E}_{0y}|^2)\hat{z}$$
 
 ### Poynting's Theorem
 
