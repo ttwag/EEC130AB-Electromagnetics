@@ -115,13 +115,11 @@ $\widetilde{E}$ denotes a phasor quantity, and $\widetilde{\mathbf{E}}$ denotes 
 
 If the time variation of the E and H field is sinusoidal with frequency $\omega$, then we can write the E and H field as:
 
-$$\vec{E}(x, y, z, t) = Re{ \widetilde{\mathbf{E}}(x, y, z) e^{j \omega t}}$$
-
 $$\vec{E}(x, y, z, t) = \text{Re} \\{ \widetilde{\mathbf{E}}(x, y, z) e^{j \omega t}\\}$$
 
 $$\vec{H}(x, y, z, t) = \text{Re} \\{ \widetilde{\mathbf{H}}(x, y, z) e^{j \omega t}\\}$$
 
-where $\bold{\vec{E}}$ and $\bold{\vec{H}}$ are the E and H field phasors with vector quantity.
+where $\widetilde{\mathbf{E}}$ and $\widetilde{\mathbf{H}}$ are the E and H field phasors with vector quantity.
 
 We can put the source-free Maxwell's Equation into the phasor domain by swapping the time derivatives with $j \omega$ and vectors with phasors.
 
@@ -170,17 +168,17 @@ $$ \vec{\nabla}^2 \vec{E} = \mu \epsilon \frac{\partial ^2}{\partial t^2}\vec{E}
 
 Notice that this is a wave equation in 3-dimensional space.
 
-In the phasor domain, the PDE takes in a form similar to the Helmholtz Equation in the transmission line
-<!-- Change -->
-$$\vec{\nabla}^2 \bold{\vec{E}} + \mu \epsilon \omega^2\bold{\vec{E}} = 0$$
+In the phasor domain, the PDE takes a form similar to the Helmholtz Equation in the transmission line
+
+$$\vec{\nabla}^2 \widetilde{\mathbf{E}} + \mu \epsilon \omega^2\widetilde{\mathbf{E}} = 0$$
 
 A plane wave solution looks like
-<!-- Change -->
-$$\bold{\vec{E}}(x, y, z) = \bold{\vec{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)}$$
+
+$$\widetilde{\mathbf{E}}(x, y, z) = \widetilde{\mathbf{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)}$$
 
 where
-<!-- Change -->
-$$\bold{\vec{E}}_0 = \bold{E}_{0x}\hat{x} + \bold{E}_{0y}\hat{y} + \bold{E}_{0z}\hat{z}$$
+
+$$\widetilde{\mathbf{E}}_0 = \widetilde{E}_{0x}\hat{x} + \widetilde{E}_{0y}\widetilde{y} + \widetilde{E}_{0z}\hat{z}$$
 
 **Note that each component could be a complex number that carries a phase as well. They could also vary spatially.**
 
@@ -201,32 +199,32 @@ If we put the general solution back to the phasor PDE, we get
 $$|\vec{k}| = \sqrt{\mu \epsilon} \omega = \frac{2 \pi}{\lambda}$$
 
 **H field**
-<!-- Change -->
+
 By working with the E field phasor, we will get the magnetic field phasor
 
-$$\bold{\vec{H}} (\vec{r}) = \frac{1}{\eta} \hat{k} \times \bold{\vec{E}} (\vec{r})$$
+$$\widetilde{\mathbf{H}} (\vec{r}) = \frac{1}{\eta} \hat{k} \times \widetilde{\mathbf{E}} (\vec{r})$$
 
 where $\hat{k}$ points in the direction of $\vec{k}$
 
 We can also find for the E field phasor that
-<!-- Change -->
-$$\bold{\vec{E}}(\vec{r}) = -\eta \hat{k} \times \bold{\vec{H}}(\vec{r})$$
+
+$$\widetilde{\mathbf{E}}(\vec{r}) = -\eta \hat{k} \times \widetilde{\mathbf{H}}(\vec{r})$$
 
 **Geometric Restriction**
-<!-- Change -->
+
 If we recall the Maxwell Equation in phasor form,
 
-$$\vec{\nabla} \cdot \bold{\vec{E}} = 0$$
+$$\vec{\nabla} \cdot \widetilde{\mathbf{E}} = 0$$
 
-$$\implies (\frac{\partial}{\partial x}\hat{x} + \frac{\partial}{\partial y}\hat{y} + \frac{\partial}{\partial z}\hat{z}) \cdot \bold{\vec{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)} = 0$$
+$$\implies (\frac{\partial}{\partial x}\hat{x} + \frac{\partial}{\partial y}\hat{y} + \frac{\partial}{\partial z}\hat{z}) \cdot \widetilde{\mathbf{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)} = 0$$
 
 $$\implies -(jk_x)E_{0x}e^{-j(k_x x+ k_y y+ k_z z)} -(jk_y)E_{0y}e^{-j(k_x x+ k_y y+ k_z z)} -(jk_z)E_{0z}e^{-j(k_x x+ k_y y+ k_z z)} = 0$$
 
-$$\implies (-j)(\vec{k} \cdot \bold{\vec{E}}) = 0$$
+$$\implies (-j)(\vec{k} \cdot \widetilde{\mathbf{E}}) = 0$$
 
 Similarly, 
 
-$$(-j)(\vec{k} \cdot \bold{\vec{H}}) = 0$$
+$$(-j)(\vec{k} \cdot \mathbf{\widetilde{H}}) = 0$$
 
 We can conclude that 
 <!-- Change -->
