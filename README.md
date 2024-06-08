@@ -20,3 +20,7 @@ You can see the detailed course description in [https://ece.ucdavis.edu/course-c
 
 * With knowledge of electric and magnetic fields, we can store and process information and energy.
 * With knowledge of electromagnetic waves, we can transmit information and energy.
+
+## Reference
+
+<!-- Update -->

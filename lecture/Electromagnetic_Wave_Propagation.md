@@ -1,6 +1,8 @@
 # Electromagnetic Wave Propagation
 
-In the transmission line section, we looked at wave propagation in 1 spatial coordinate. Here, we will build on our knowledge of Maxwell's Equation and model the EM wave propagating in any direction.
+In the transmission line section, we looked at wave propagation in 1 spatial coordinate. Here, we will build on our knowledge of Maxwell's Equation and model a uniform EM wave propagating in the z direction.
+Then, we will extend the model to account for the uniform EM wave travelling in any direction. 
+We will examine uniform plane wave's various properties such as polarization, carried power, and propagation in different materials.
 
 ## 1. Maxwell's Equation
 
@@ -26,13 +28,13 @@ $$\vec{\nabla} \times \vec{H} = \epsilon \frac{\partial \vec{E}}{\partial t}$$
 
 where $\mu_0 \epsilon_0 \frac{d \phi_E}{dt}$ is the displacement current.
 
-**Intuition**: If we only look at the dynamic equations, the time-varying B field induces the circulating E field. Time-varying E field induces circulating B field.
+**Intuition**: If we only look at the dynamic equations, the time-varying H field induces the circulating E field. Time-varying E field induces circulating H field.
 
 ![Figure14](./image/Figure14.png)
 
 ## 2. Uniform Plane Wave Solution
 
-Assume $\vec{E} = E_x(z, t) \hat{x}$ and $\vec{H} = H_y(z, t) \hat{y}$, so they are constant in planes of constant z with medium $\epsilon$ and $\mu$.
+Assume $\vec{E} = E_x(z, t) \hat{x}$ and $\vec{H} = H_y(z, t) \hat{y}$, so they are **uniform** in **planes** of constant z with medium $\epsilon$ and $\mu$.
 
 We  will get 
 
@@ -71,7 +73,7 @@ k is the wave number, $\frac{2 \pi}{\lambda}$
 
 ### Intrinsic Impedance
 
-The Intrinsic Impedance relates the magnitude of E field to B field, just like the Characteristic Impedance relates the voltage and the current.
+The Intrinsic Impedance relates the magnitude of the E field to H field, just like the Characteristic Impedance relates the voltage and the current.
 
 $$\eta = \sqrt{\frac{\mu}{\epsilon}}$$
 
@@ -79,7 +81,7 @@ where $\mu$ is the magnetic constant and $\epsilon$ is the electric constant,
 
 and 
 
-$$|\vec{E_x}| = \eta |\vec{H_y}| $$
+$$|E_x| = \eta |H_y| $$
 
 In vacuum, 
 
@@ -107,9 +109,11 @@ $$\frac{\partial i(z, t)}{\partial z} = - C' \frac{dv(z, t)}{dt}$$
 
 ## 3. Phasors and Maxwell's Equations
 
+$\widetilde{E}$ denotes a phasor quantity, and $\widetilde{\mathbf{E}}$ denotes a phasor that is also a vector.
+
 ### Maxwell's Equations in Phasor Domain
 
-If the time variation of the E and B field is sinusoidal with frequency $\omega$, then we can write the E and B field as:
+If the time variation of the E and H field is sinusoidal with frequency $\omega$, then we can write the E and H field as:
 
 $$\vec{E}(x, y, z, t) = Re{ \widetilde{\mathbf{E}}(x, y, z) e^{j \omega t}}$$
 
@@ -117,21 +121,21 @@ $$\vec{E}(x, y, z, t) = \text{Re} \\{ \widetilde{\mathbf{E}}(x, y, z) e^{j \omeg
 
 $$\vec{H}(x, y, z, t) = \text{Re} \\{ \widetilde{\mathbf{H}}(x, y, z) e^{j \omega t}\\}$$
 
-where $\bold{\vec{E}}$ and $\bold{\vec{H}}$ are the E and B field phasors with vector quantity.
+where $\bold{\vec{E}}$ and $\bold{\vec{H}}$ are the E and H field phasors with vector quantity.
 
 We can put the source-free Maxwell's Equation into the phasor domain by swapping the time derivatives with $j \omega$ and vectors with phasors.
-<!-- Change -->
-$$\vec{\nabla} \cdot \bold{\vec{E}} = 0$$
 
-$$\vec{\nabla} \times \bold{\vec{E}} = -\mu j\omega \bold{\vec{H}}$$
+$$\vec{\nabla} \cdot \widetilde{\mathbf{E}} = 0$$
 
-$$\vec{\nabla} \cdot \bold{\vec{H}} = 0$$
+$$\vec{\nabla} \times \widetilde{\mathbf{E}} = -\mu j\omega \widetilde{\mathbf{H}}$$
 
-$$\vec{\nabla} \times \bold{\vec{H}} = \epsilon j\omega \bold{\vec{E}}$$
+$$\vec{\nabla} \cdot \widetilde{\mathbf{H}} = 0$$
+
+$$\vec{\nabla} \times \widetilde{\mathbf{H}} = \epsilon j\omega \widetilde{\mathbf{E}}$$
 
 ### Plain EM Wave in Phasor Domain
 
-<!-- Change -->
+
 Recall that the plain wave solutions are
 
 $$\vec{E} = E_0 cos(\omega t - kz) \hat{x}$$
@@ -146,9 +150,9 @@ $$\vec{H} = H_0 cos(\omega t - k z)\hat{y} = Re\{H_0 e^{j(\omega t - k z)}\hat{y
 
 In the phasor domain, they are 
 
-$$\bold{\vec{E}} = E_0 e^{-jkz} \hat{x}$$
+$$\widetilde{\mathbf{E}} = E_0 e^{-jkz} \hat{x}$$
 
-$$\bold{\vec{H}} = \frac{E_0}{\eta} e^{-jkz} \hat{y}$$
+$$\widetilde{\mathbf{H}} = \frac{E_0}{\eta} e^{-jkz} \hat{y}$$
 
 ## 4. Time-Harmonic Plane Waves in Any Direction
 
@@ -167,15 +171,15 @@ $$ \vec{\nabla}^2 \vec{E} = \mu \epsilon \frac{\partial ^2}{\partial t^2}\vec{E}
 Notice that this is a wave equation in 3-dimensional space.
 
 In the phasor domain, the PDE takes in a form similar to the Helmholtz Equation in the transmission line
-
+<!-- Change -->
 $$\vec{\nabla}^2 \bold{\vec{E}} + \mu \epsilon \omega^2\bold{\vec{E}} = 0$$
 
 A plane wave solution looks like
-
+<!-- Change -->
 $$\bold{\vec{E}}(x, y, z) = \bold{\vec{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)}$$
 
 where
-
+<!-- Change -->
 $$\bold{\vec{E}}_0 = \bold{E}_{0x}\hat{x} + \bold{E}_{0y}\hat{y} + \bold{E}_{0z}\hat{z}$$
 
 **Note that each component could be a complex number that carries a phase as well. They could also vary spatially.**
@@ -196,8 +200,8 @@ If we put the general solution back to the phasor PDE, we get
 
 $$|\vec{k}| = \sqrt{\mu \epsilon} \omega = \frac{2 \pi}{\lambda}$$
 
-**B Field**
-
+**H field**
+<!-- Change -->
 By working with the E field phasor, we will get the magnetic field phasor
 
 $$\bold{\vec{H}} (\vec{r}) = \frac{1}{\eta} \hat{k} \times \bold{\vec{E}} (\vec{r})$$
@@ -205,11 +209,11 @@ $$\bold{\vec{H}} (\vec{r}) = \frac{1}{\eta} \hat{k} \times \bold{\vec{E}} (\vec{
 where $\hat{k}$ points in the direction of $\vec{k}$
 
 We can also find for the E field phasor that
-
+<!-- Change -->
 $$\bold{\vec{E}}(\vec{r}) = -\eta \hat{k} \times \bold{\vec{H}}(\vec{r})$$
 
 **Geometric Restriction**
-
+<!-- Change -->
 If we recall the Maxwell Equation in phasor form,
 
 $$\vec{\nabla} \cdot \bold{\vec{E}} = 0$$
@@ -225,17 +229,17 @@ Similarly,
 $$(-j)(\vec{k} \cdot \bold{\vec{H}}) = 0$$
 
 We can conclude that 
-
+<!-- Change -->
 $$\vec{k} \perp \bold{\vec{E}} $$
 
 $$\vec{k} \perp \bold{\vec{H}} $$
 
-From the cross-product definition of the E and B fields, we further know that
+From the cross-product definition of the E and H fields, we further know that
 
 $$\bold{\vec{E}} \perp \bold{\vec{H}} $$
 
 **Intuition**
-
+<!-- Change -->
 When $\vec{k} \cdot \vec{r}$ is constant, or $\vec{k} \cdot \vec{r}_1 = \vec{k} \cdot \vec{r}_2$, there's a plane perpendicular to $\vec{k}$ where the field is constant (**Uniform**). However, the field can change from plane to plane.
 
 ## 5. Wave Polarization of a Uniform Plane Wave
@@ -243,14 +247,12 @@ When $\vec{k} \cdot \vec{r}$ is constant, or $\vec{k} \cdot \vec{r}_1 = \vec{k} 
 The polarization of a **uniform plane wave** describes the locus (collection of point) traced by the tip of the $\vec{E}$ vector (in the plane orthogonal to propagation) at a given point in space as a function of time.
 
 Assumptions:
-* The wave propagates in the z direction ($\vec{k}$ points to the z direction)
+* The wave propagates in the z-direction ($\vec{k}$ points to the z-direction)
 * The plane wave is uniform, meaning the E field is constant in magnitude and direction on a plane at a given time.
 
 Since the wave vector points to the z direction, the E field must lie in the x-y plane, where polarization occurs.
-
+<!-- Change -->
 $$\bold{\vec{E}}(x, y, z) = \bold{\vec{E}}_0 e^{-j (k_x x+ k_y y+ k_z z)} = (\bold{E_{0x}}\hat{x} + \bold{E_{0y}}\hat{y})e^{-j (k_z z)}$$
-
-
 
 $$\bold{\vec{E}}(z) = \hat{x} E_{0x} e^{-jk_z z} + \hat{y} E_{0y} e^{-jk_z z}$$
 
@@ -283,7 +285,7 @@ $$\psi (z = z_0, t) = arctan\Big(\frac{E_y(z, t)}{E_x(z, t)}\Big)$$
 $\vec{E}(z, t)$ traces out a line
 
 Consider $\delta = 0$ or $\delta = \pi$,
-
+<!-- Change -->
 $$\bold{\vec{E}}(z) = (\hat{x} a_x + \hat{y} a_y e^{j \delta})e^{-jk_z z}$$
 
 $$= (\hat{x} a_x \pm \hat{y} a_y)e^{-jk_z z}$$
@@ -310,11 +312,11 @@ $$\psi (z = z_0, t) = arctan\Big(\frac{a_y}{a_x}\Big)$$
 $\vec{E}(z, t)$ traces out a circle in the clockwise direction.
 
 Consider $\delta = \frac{\pi}{2}$ and $a_x = a_y = a$,
-
+<!-- Change -->
 $$\bold{\vec{E}}(z) = (\hat{x} a + \hat{y} a e^{j \frac{\pi}{2}})e^{-jk_z z} = (\hat{x} a + \hat{y}aj)e^{-jkz}$$
 
 In the time domain, 
-
+<!-- Change -->
 $$\vec{E}(z, t) = Re\{\bold{\vec{E}}(z)e^{j\omega t}\} = \hat{x}a \space cos(\omega t - k_z z) + \hat{y} a \space cos(\omega t - k_z z + \frac{\pi}{2})$$
 
 $$= \hat{x}a \space cos(\omega t - k_z z) - \hat{y} a \space sin(\omega t - k_z z)$$
@@ -355,7 +357,7 @@ $a_{\xi}$ is the length of the major axis and $a_{\eta}$ is the length of the mi
 
 The shape and handedness of the ellipse are characterized by the ellipticity angle, $\chi$
 
-$$tan(\chi) = \pm \frac{a_{\eta}}{a_{\xi}} = \pm \frac{1}{R}$$
+$$\tan(\chi) = \pm \frac{a_{\eta}}{a_{\xi}} = \pm \frac{1}{R}$$
 
 $$-\frac{\pi}{4} \leq \chi \leq \frac{\pi}{4}$$
 
@@ -363,7 +365,7 @@ The plus sign corresponds to clockwise rotation and the minus sign corresponds t
 
 The following relationship between parameters also holds:
 
-$$sin2\chi = (sin2\psi_0)sin\delta$$
+$$\sin2\chi = (\sin2\psi_0)\sin\delta$$
 
 $$-\frac{\pi}{4}\leq \chi \leq \frac{\pi}{4}$$
 
@@ -372,19 +374,19 @@ $$-\frac{\pi}{4}\leq \chi \leq \frac{\pi}{4}$$
 
 The angle between the major axis of the ellipse to the reference axis, which is the x-axis here.
 
-$$tan(2 \gamma) = tan(2 \psi_0) \space cos(\delta)$$
+$$\tan(2 \gamma) = \tan(2 \psi_0) \space \cos(\delta)$$
 
 $$-\frac{\pi}{2} \leq \gamma \leq \frac{\pi}{2}$$
 
 Rule:
 
-$\gamma > 0$ for $cos(\delta) > 0$
+$\gamma > 0$ for $\cos(\delta) > 0$
 
-$\gamma < 0$ for $cos(\delta) < 0$
+$\gamma < 0$ for $\cos(\delta) < 0$
 
 **Auxiliary Angle**
 
-$$tan(\psi_0) = \frac{a_y}{a_x}$$
+$$\tan(\psi_0) = \frac{a_y}{a_x}$$
 
 $$0 \leq \psi_0 \leq \frac{\pi}{2}$$
 
@@ -427,7 +429,7 @@ In a conductor, ohm's law applies
 $$\vec{J} = \sigma \vec{E}$$
 
 Therefore, we cannot assume the wave is traveling in the source-free medium. So the curl of H field becomes:
-
+<!-- Change -->
 $$\vec{\nabla} \times \bold{\vec{H}} = \sigma \bold{\vec{E}} + j\omega \epsilon \bold{\vec{E}}$$
 
 $$\implies \vec{\nabla} \times \bold{\vec{H}} = (\sigma + j\omega \epsilon )\bold{\vec{E}}$$
@@ -452,7 +454,7 @@ It means that the wave attenuates as it travels because of the $e^{-\alpha z}$ t
 
 For both the complex wave number and the intrinsic impedance, both are related a quantity called the "loss tangent" ($\delta_c$)
 
-$$tan (\delta_c) = \frac{\epsilon''}{\epsilon'}$$
+$$\tan (\delta_c) = \frac{\epsilon''}{\epsilon'}$$
 
 The more conductive a material is, the greater the $\sigma$, and the greater the $\epsilon''$.
 
@@ -485,7 +487,7 @@ $$\delta_s = \frac{1}{\alpha}$$
 ## 7. Power Carried by the EM Wave
 
 ### Time Average Poynting Vector
-
+<!-- Change -->
 $$\vec{S}_{avg} = \frac{1}{2} Re\{\bold{\vec{E} \times \bold{\vec{H}^*}}\}$$
 
 $\vec{S}_{avg}$ is the power density and has the unit of watts per area squared.
