@@ -112,7 +112,7 @@ $$\eta_0 = \sqrt{\frac{\mu_0}{\epsilon_0}} = 377 \space \Omega$$
 
 If the time variation of the E and B field is sinusoidal with frequency $\omega$, then we can write the E and B field as:
 
-$$\vec{E}(x, y, z, t) = Re \{ \bold{\widetilde{E}}(x, y, z) e^{j \omega t}\}$$
+$$\vec{E}(x, y, z, t) = Re \{ \widetilde{\bold{E}}(x, y, z) e^{j \omega t}\}$$
 
 $$\vec{H}(x, y, z, t) = Re \{ \bold{\vec{H}}(x, y, z) e^{j \omega t}\}$$
 
