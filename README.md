@@ -13,8 +13,10 @@ This repository contains lecture notes of the EEC130 series from the University 
 
 **EEC130B (Currently Updating)**
 
+* [Electromagnetic Plane Wave Propagation](./lecture/Electromagnetic_Wave_Propagation.md)
+* [Reflection and Transmission](./lecture/Reflection_and_transmission.md)
+* [Waveguides](./lecture/Waveguides.md)
 
-You can see the detailed course description in [https://ece.ucdavis.edu/course-catalog](https://ece.ucdavis.edu/course-catalog)
 
 ## Why Study Electromagnetics?
 
@@ -24,3 +26,8 @@ You can see the detailed course description in [https://ece.ucdavis.edu/course-c
 ## Reference
 
 <!-- Update -->
+This is the note that I took while taking Professor William Putnam's EEC130AB courses in UC Davis.
+
+You can see the detailed course description in [https://ece.ucdavis.edu/course-catalog](https://ece.ucdavis.edu/course-catalog)
+
+<!-- Textbook -->

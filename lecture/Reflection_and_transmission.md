@@ -1,18 +1,15 @@
-# EM Wave Reflection and Refraction
+# Reflection and Transmission
 
 
-
-Reflection Coefficient for EM wave that propagates from $\eta_1$ to $\eta_2$.
-
-$$\Gamma = \frac{\eta_2 - \eta_1}{\eta_2 + \eta_1}$$
-
-To find out the reflection and refraction behavior of EM waves, we need to use the boundary condition of the E and H fields.
-
-## Normal Reflection and Transmission
+## 1. Normal Reflection and Transmission
 
 **Normal Incidence**: the wave vector k is **perpendicular** to the surface of the materials' boundary. 
 
-Assume that we have a uniform plane wave traveling in the z direction and pas\sing from medium 1 to medium 2
+Assume that we have a uniform plane wave traveling in the z direction and passing from medium 1 to medium 2
+
+To find out the reflection and refraction behavior of EM waves, we need to use the boundary condition of the E and H fields.
+
+
 
 | | Incident | Reflected | Transmitted |
 |---:| ---:|---:|---:|
@@ -27,11 +24,11 @@ $$E_0^i + E_0 ^\Gamma = E_0 ^T$$
 
 $$\frac{E_0 ^ i }{\eta_1} - \frac{E_0 ^ \Gamma}{\eta_1} = \frac{E_0 ^T}{\eta_2}$$
 
-**Reflection Coefficient**
+### Reflection Coefficient
 
 $$\Gamma = \frac{\eta_2 - \eta_1}{\eta_2 + \eta_1}$$
 
-**Transmission Coefficient**
+### Transmission Coefficient
 
 $$\tau = \frac{2\eta_2}{\eta_2 + \eta_1}$$
 
@@ -43,13 +40,6 @@ Notice that the result is the same as those from the transmission line if we rep
 
 The transmission line could be thought of as a 1D EM Wave traveling from medium to medium.
 
-### Standing Wave
-
-The incidence and reflected waveform a standing wave
-
-**Standing Wave Ratio**
-
-
 ### Power Flow in Reflection and Transmission
 
 Power flow in medium 1
@@ -60,7 +50,7 @@ Power flow in medium 2
 
 $$\vec{S}_{av} =|\tau|^2 \frac{|E_0^i|^2}{2 \eta_2} \hat{z}$$
 
-## Oblique Reflection and Transmission
+## 2. Oblique Reflection and Transmission
 
 The **refractive index** is defined as
 
@@ -74,7 +64,7 @@ and for the wavelength
 
 $$\lambda = \frac{\lambda_0}{n}$$
 
-### What Happens When the Incident Wave Comes at an Angle?
+**What Happens When the Incident Wave Comes at an Angle?**
 
 **Expectation 1:** The transmitted wave must travel at a different angle.
 
@@ -87,25 +77,19 @@ That's because the wave should have a shorter wavelength in medium 2, resulting 
 
 ![Figure17](./image/Figure17.png)
 
-### Reflection and Refraction Angle
+### Reflection and Transmission Angle
 
 $$\theta_i = \theta_r$$
 
 $$\frac{\sin \space \theta_t}{\sin \space \theta_i} = \frac{n_1}{n_2}$$
 
-When the refracted angle $\theta_t$ is undefined, we have a total internal reflection.
+When the transmission angle $\theta_t$ is undefined, we have a total internal reflection.
 
 ### Perpendicular Polarization
 
-**Reflection**
+$$\Gamma_{\perp} = \frac{\eta_2 \space \cos\space \theta_i - \eta_1 \space \cos \space \theta_t}{\eta_2 \space \cos \space \theta_i + \eta_1 \space \cos \space \theta_t}$$
 
-
-$$\Gamma_{\perp} = \frac{\eta_2 \space cos\space \theta_i - \eta_1 \space cos \space \theta_t}{\eta_2 \space cos \space \theta_i + \eta_1 \space cos \space \theta_t}$$
-
-**Refraction**
-
-
-$$\tau_{\perp} = \frac{2 \eta_2\space cos\space \theta_i}{\eta_2 \space cos \space \theta_i + \eta_1 \space cos \theta_t}$$
+$$\tau_{\perp} = \frac{2 \eta_2\space \cos\space \theta_i}{\eta_2 \space \cos \space \theta_i + \eta_1 \space \cos \theta_t}$$
 
 The reflection and transmission coefficients are related by
 
@@ -113,11 +97,11 @@ $$\tau_{\perp} = 1 + \Gamma_{\perp}$$
 
 ### Parallel Polarization
 
-$$\Gamma_{\parallel} = \frac{\eta_2 \space cos\space \theta_t - \eta_1 \space cos \space \theta_i}{\eta_2 \space cos \space \theta_t + \eta_1 \space cos \space \theta_i}$$
+$$\Gamma_{\parallel} = \frac{\eta_2 \space \cos\space \theta_t - \eta_1 \space \cos \space \theta_i}{\eta_2 \space \cos \space \theta_t + \eta_1 \space \cos \space \theta_i}$$
 
-$$\tau_{\parallel} = \frac{2 \eta_2\space cos\space \theta_i}{\eta_2 \space cos \space \theta_t + \eta_1 \space cos \theta_i}$$
+$$\tau_{\parallel} = \frac{2 \eta_2\space \cos\space \theta_i}{\eta_2 \space \cos \space \theta_t + \eta_1 \space \cos \theta_i}$$
 
-$$\tau_{\parallel} = (1 + \Gamma_{\parallel})\frac{cos \space \theta_i}{cos \space \theta_t}$$
+$$\tau_{\parallel} = (1 + \Gamma_{\parallel})\frac{\cos \space \theta_i}{\cos \space \theta_t}$$
 
 **The tangential component of the incident, reflected, and transmitted electric field should be in the same direction.**
 
@@ -126,7 +110,7 @@ $$\tau_{\parallel} = (1 + \Gamma_{\parallel})\frac{cos \space \theta_i}{cos \spa
 The Brewster's Angle is the incident wave angle that results in no reflection of the incident wave, and it's different for the parallel and perpendicular polarizations of the Electric field.
 
 **Parallel Polarization**
-$$tan \space \theta_B = \sqrt{\frac{\epsilon_2}{\epsilon_1}}$$
+$$\tan \space \theta_B = \sqrt{\frac{\epsilon_2}{\epsilon_1}}$$
 
 **Perpendicular Polarization**
 
@@ -142,7 +126,7 @@ $$\implies 1 = \frac{n_1}{n_2} \sin \space \theta_c$$
 
 $\theta_c$ is the critical angle that causes total internal reflection
 
-### Multiple Interfaces
+## 3. Multiple Interfaces
 
 When a wave travels from one medium to another medium, its wavelength and phase velocity change.
 

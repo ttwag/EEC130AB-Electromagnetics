@@ -1,4 +1,4 @@
-# Electromagnetic Wave Propagation
+# Electromagnetic Plane Wave Propagation
 
 In the transmission line section, we looked at wave propagation in 1 spatial coordinate. Here, we will build on our knowledge of Maxwell's Equation and model a uniform EM wave propagating in the z direction.
 Then, we will extend the model to account for the uniform EM wave travelling in any direction. 
