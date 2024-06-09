@@ -1,5 +1,7 @@
 # Magnetostatics
 
+Studies the magnetic field when current does not vary with time.
+
 ## 1. Current Density
 
 We are interested in how much charge crosses the plane P in time $\Delta t$

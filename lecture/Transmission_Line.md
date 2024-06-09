@@ -219,7 +219,7 @@ Also, $\beta = \omega \sqrt{L'C'}$, so the phase velocity of the waves are
 
 $$v_p = \frac{\omega}{\beta} = \frac{1}{\sqrt{L'C'}}$$
 
-### Characteristic Impedance $(Z_0)$
+### Characteristic Impedance
 
 Could the $V_0^+$ and $I_0^+$ be related and the same for the reflected wave?
 
@@ -338,7 +338,7 @@ The first term represents the power carried by the incident wave, and the second
 Power is largest when $|\gamma| = 0$.
 There's no power transmitting when $|\gamma| = 1$
 
-### Wave Impedance $\gamma (d)$
+### Wave Impedance
 
 We could turn the transmission line into a simple lumped impedance.
 

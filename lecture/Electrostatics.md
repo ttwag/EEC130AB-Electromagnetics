@@ -1,8 +1,8 @@
 # Electrostatics
 
-This chapter goes over the theory of electricity when the charge is static and not vary with time. 
+This chapter goes over the theory of electricity when the charge is static and does not vary with time. 
 
-## 1. Electrical Charge
+## 1. Electric Charge
 
 **Definition**
 * The source of an electrostatic field.

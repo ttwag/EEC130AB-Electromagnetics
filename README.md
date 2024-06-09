@@ -13,7 +13,7 @@ This repository contains lecture notes of the EEC130 series from the University 
 
 ### EEC130B
 
-* [Electromagnetic Plane Wave Propagation](./lecture/Electromagnetic_Wave_Propagation.md)
+* [Electromagnetic Uniform Plane Wave Propagation](./lecture/Electromagnetic_Wave_Propagation.md)
 * [Reflection and Transmission](./lecture/Reflection_and_transmission.md)
 * [Waveguides](./lecture/Waveguides.md)
 
@@ -25,9 +25,11 @@ This repository contains lecture notes of the EEC130 series from the University 
 
 ## Reference
 
-<!-- Update -->
-This is the note that I took while taking Professor William Putnam's EEC130AB courses in UC Davis.
 
-You can see the detailed course description in [https://ece.ucdavis.edu/course-catalog](https://ece.ucdavis.edu/course-catalog)
+* This is the note that I took while taking Professor **William Putnam**'s EEC130AB courses at UC Davis in the Winter/Spring Quarter of 2024. 
+You can see the detailed course description at [https://ece.ucdavis.edu/course-catalog](https://ece.ucdavis.edu/course-catalog).
 
-<!-- Textbook -->
+
+
+* In this course, we used the following textbook: **Fundamentals of Applied Electromagnetics by Fawwaz T. Ulaby and Umberto Ravaioli, 8th Edition, Pearson, 2020.**
+* Some images in this GitHub come from the lecture notes of Professor Putnam or the textbook.

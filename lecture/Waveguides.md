@@ -94,6 +94,8 @@ $$k_c ^2= k_x ^2 + k_y ^2$$
 
 $$\Big(\frac{m \pi}{a}\Big)^2 + \Big(\frac{n \pi}{b}\Big)^2 + k_z ^2 = \epsilon \mu \omega^2$$
 
+### Cut-Off Frequency
+
 When $k_z = 0,$
 
 $$\omega_{cut-off \space m, n} = \frac{1}{\sqrt{\mu \epsilon}} \sqrt{\Big(\frac{m \pi}{a}\Big)^2 + \Big(\frac{n \pi}{b}\Big)^2}$$
