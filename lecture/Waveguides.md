@@ -1,4 +1,10 @@
-## Parallel Plate Waveguides
+# Waveguides
+
+This chapter derives the EM wave solution traveling in parallel plate and rectangular waveguides and their dispersion relations. Waveguide can guide the EM wave in the direction that the application wants. 
+
+For example, in a microwave oven, we want the EM wave to be guided to the food chamber to vibrate the water molecules in the food, which heat the food.
+
+## 1. Parallel Plate Waveguides
 
 If we have an EM wave incident on a perfect conductor, $\Gamma = -1$ regardless of the incident angle.
 
@@ -14,7 +20,7 @@ Consider a plane wave reflecting from the bottom conductor of a parallel-plate w
 
 The total wave is
 
-$$\bold{\widetilde{E}}(x, z) = \bold{\widetilde{E}_i} + \bold{\widetilde{E}_r}$$
+$$\mathbf{\widetilde{E}}(x, z) = \mathbf{\widetilde{E}_i} + \mathbf{\widetilde{E}_r}$$
 
 $$= \hat{y} E_0 ^i e^{-j(-k_x x + k_z z)} + \hat{y} \Gamma E_0 ^i e^{-j(k_x x + k_z z)}$$
 
@@ -28,36 +34,13 @@ If the distance between the metallic plates is d, $\sin(k_x x) = 0$ because the 
 
 The electric field phasor of EM wave traveling toward z inside a perfectly conducting waveguide becomes:
 
-$$\bold{\widetilde{E}(x, z)} = \hat{y} E_{0}^i \sin \Big(\frac{\pi m}{d} x \Big) e^{- j k_z z}$$
+$$\bold{\widetilde{E}}(x, z) = \hat{y} E_{0}^i \sin \Big(\frac{\pi m}{d} x \Big) e^{- j k_z z}$$
 
 where m is any positive integer.
 
 Notice that if we fix z, we have a standing wave across x. If we fix x, we have a wave traveling toward +z.
 
 The phasor forms a grid-like pattern moving toward +z. When two metallic plate waveguides are placed at the axis, the wave doesn't exist outside of the waveguide. 
-
-
-**Dispersion**
-
-$$k_x ^2 + k_y ^2 + k_z ^2 = \epsilon \mu_0 \omega ^2$$
-
-$$(\frac{m \pi}{d})^2 + k_z ^2 = \epsilon \mu_0 \omega^2$$
-
-
-We can rearrange the equation above into:
-
-$$k_z = \sqrt{\mu_0 \epsilon \omega^2 - (\frac{m \pi}{d})^2}$$
-
-The cut-off frequency occurs when $k_z = 0$
-
-![Figure20](./image/Figure20.png)
-
-$$\omega_{cm} = \frac{1}{\sqrt{\mu \epsilon}} \frac{m \pi}{d}$$
-
-* Attenuation: $\mu_0 \epsilon \omega^2 < (\frac{m \pi}{d})^2$ means $k_z$ is imaginary and there's loss.
-* The single mode regime must be between $\omega_{c1}$ and $\omega_{c2}$.
-* If transmit an EM wave of frequency $\omega$ and want it to propagate in mode $m$ without loss, $\omega$ should be larger than the cut-off frequency of $m$ so that $k_z$ is not a complex number that introduces loss to the wave.
-
 
 ### Transverse Magnetic (TM) Mode
 
@@ -73,8 +56,31 @@ $$\bold{\widetilde{E}}(x, z) = \hat{x} \eta H_0 e^{-j k_z z}$$
 
 The m = 0 solution is special such that it only exists for TM mode because TM mode is related to cosine, which is not zero at m = 0.
 
+### Dispersion Relation
 
-## Rectangular Waveguides
+The dispersion relations relates the propagation constant, $k$, and the operating frequency of the wave, $\omega$
+
+$$k_x ^2 + k_y ^2 + k_z ^2 = \epsilon \mu_0 \omega ^2$$
+
+$$\Big(\frac{m \pi}{d}\Big)^2 + k_z ^2 = \epsilon \mu_0 \omega^2$$
+
+We can rearrange the equation above into:
+
+$$k_z = \sqrt{\mu_0 \epsilon \omega^2 - \Big(\frac{m \pi}{d}\Big)^2}$$
+
+### Cut-Off Frequency
+
+The cut-off frequency occurs when $k_z = 0$
+
+![Figure20](./image/Figure20.png)
+
+$$\omega_{cm} = \frac{1}{\sqrt{\mu \epsilon}} \frac{m \pi}{d}$$
+
+* Attenuation: $\mu_0 \epsilon \omega^2 < (\frac{m \pi}{d})^2$ means $k_z$ is imaginary and there's loss.
+* The single mode regime must be between $\omega_{c1}$ and $\omega_{c2}$.
+* If transmit an EM wave of frequency $\omega$ and want it to propagate in mode $m$ without loss, $\omega$ should be larger than the cut-off frequency of $m$ so that $k_z$ is not a complex number that introduces loss to the wave.
+
+## 2. Rectangular Waveguides
 
 The parallel-plate waveguide is not realistic because it's infinite in one dimension. Therefore, we will look at the rectangular waveguides, where the wave is confined in the x and y directions.
 
@@ -86,13 +92,13 @@ $$k_c ^2= k_x ^2 + k_y ^2$$
 
 **Dispersion Relation**
 
-$$(\frac{m \pi}{a})^2 + (\frac{n \pi}{b})^2 + k_z ^2 = \epsilon \mu \omega^2$$
+$$\Big(\frac{m \pi}{a}\Big)^2 + \Big(\frac{n \pi}{b}\Big)^2 + k_z ^2 = \epsilon \mu \omega^2$$
 
 When $k_z = 0,$
 
-$$\omega_{cut-off \space m, n} = \frac{1}{\sqrt{\mu \epsilon}} \sqrt{(\frac{m \pi}{a})^2 + (\frac{n \pi}{b})^2}$$
+$$\omega_{cut-off \space m, n} = \frac{1}{\sqrt{\mu \epsilon}} \sqrt{\Big(\frac{m \pi}{a}\Big)^2 + \Big(\frac{n \pi}{b}\Big)^2}$$
 
-## Dielectric Slab Wave Guide
+## 3. Dielectric Slab Waveguide
 
 ### Surface Wave from Total Internal Reflection
 
@@ -118,9 +124,9 @@ Furthermore, we will find that
 
 $$\bold{\Gamma = 1}$$
 
-<!-- Evanescent Wave -->
+which makes the dielectric interface similar to that of a perfect conductor and makes it a good waveguide.
 
-### Dielectric Slab Waveguide
+### Waveguide Solutions
 
 For this waveguide to work, $\epsilon_1 > \epsilon_2$ because the total internal reflection occurs when $\sin(\theta_t) = \frac{n_1}{n_2} \sin(\theta_i)$
 
@@ -134,6 +140,8 @@ $$\bold{\widetilde{E}} = \hat{y} E_0 ^ i e^{-j(-k_x x + k_z z)} + \hat{y} \Gamma
 $\bold{\widetilde{E}}$ in $\epsilon_2$
 
 $$\bold{\widetilde{E}} = \hat{y} \tau E_0 ^ i e^{-j (j a_x x + k_z z)}$$
+
+### Cut-Off Frequency
 
 The cut-off frequency of the dielectric slab waveguide:
 

@@ -1,5 +1,6 @@
 # Reflection and Transmission
 
+This chapter goes through uniform plane EM wave reflection and transmission in the normal direction, then extends the concept to reflection in any direction.
 
 ## 1. Normal Reflection and Transmission
 
@@ -45,6 +46,8 @@ The transmission line could be thought of as a 1D EM Wave traveling from medium 
 Power flow in medium 1
 
 $$\vec{S}_{av} = \Big(\frac{|E_0^i|^2}{2 \eta_1} - |\Gamma|^2 \frac{|E_0^i|^2}{2 \eta_1} \Big)\hat{z}$$
+
+Note that the $-\hat{z}$ component is the power carried by the reflected wave.
 
 Power flow in medium 2
 
@@ -138,7 +141,7 @@ At normal incidence, this reflection and transmission problem maps directly to t
 
 If we extend the idea of shrinking the transmission line into a lumped circuit element, we have:
 
-$$\eta(d) = \frac{\widetilde{E}_{x}}{\widetilde{H}_y} = \eta_2 \Big( \frac{\eta_0 + j \eta_2 \tan k_2 d}{\eta_2 + j \eta_0 \tan k_2 d}\Big)$$
+$$\eta(d) = \frac{\widetilde{E}_{x}}{\widetilde{H}_y} = \eta_2 \Bigg( \frac{\eta_0 + j \eta_2 \tan k_2 d}{\eta_2 + j \eta_0 \tan k_2 d}\Bigg)$$
 
 When a transmission line is infinite without bound, it could be seen as a lumped impedance equal to the characteristic impedance because an infinite transmission won't have a reflection.
 

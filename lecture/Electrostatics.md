@@ -1,6 +1,8 @@
 # Electrostatics
 
-## Electrical Charge
+This chapter goes over the theory of electricity when the charge is static and not vary with time. 
+
+## 1. Electrical Charge
 
 **Definition**
 * The source of an electrostatic field.
@@ -22,7 +24,7 @@ $$\vec{F}\_{21} = \frac{q_1 q_2}{4 \pi \epsilon_0 R_{12}^2} \hat{r}\_{12}$$
 * Magnitude decreases with distance.
 * $\epsilon_0 = 8.85 * 10^{-12} \frac{F}{m}$ is the permittivity of free space, and it has the unit $\frac{F}{m}$, which is the same as $C'$ from the transmission line.
 
-## Electric Field
+## 2. Electric Field
 The vector that is equal in magnitude and direction to the force that would be exerted on a small test charge p carrying a charge of +1 from a charge with +q.
 
 $$\vec{E}_p = \vec{F}_p = \frac{1}{4 \pi \epsilon_0} \frac{(+q) (+1)}{|\vec{R}|^2} \vec{r}_p$$
@@ -45,7 +47,7 @@ The sum of the N number of the E field at charge p:
 
 $$\vec{E}\_p = \frac{1}{4 \pi \epsilon_0} \sum_{i = 1}^{N} \frac{q_i}{|\vec{R} - \vec{R}\_i|^2} \frac{\vec{R} - \vec{R}\_i}{|\vec{R} - \vec{R}\_i|}$$
 
-## Charge Distribution
+## 3. Charge Distribution
 
 We characterize the charge distribution in terms of the **charge density**.
 
@@ -69,7 +71,7 @@ $\rho_V = \frac{dq}{dV} \space (\frac{C}{m^3})$
 
 $q = \int dq = \int \rho_V dV$
 
-## Electric Field from a Charge Distribution
+## 4. Electric Field from a Charge Distribution
 
 For a general distribution, we add up the contribution to the E field from each chunk of charge dq to point p.
 
@@ -83,7 +85,7 @@ $$\int \frac{\rho_V(\vec{r}) dV}{4 \pi \epsilon_0 |\vec{r_p} - \vec{r}|^2} \frac
 
 where $\vec{r_p} - \vec{r}$ is the vector subtraction between the position vector of the point $p$ and the chunk of volume in the integral. 
 
-## Electric Scalar Potential
+## 5. Electric Scalar Potential
 
 We want to solve the electrostatics problem with scalar quantity.
 
@@ -118,7 +120,7 @@ $$\vec{E} = -\vec{\nabla} V$$
 
 Force per charge = the negative of the change in potential per charge
 
-## Gauss' Law
+## 6. Gauss' Law
 
 The amount of E field passes through a closed surface S
 
@@ -135,7 +137,7 @@ Steps
 2. Define S so that flux integral will be easy ($|\vec{E}|$ should be constant on S).
 3. Evaluate the flux integral and enclosed charge.
 
-## Conductors
+## 7. Conductors
 * In a good conductor, under static conditions (electrostatics), the E field is 0 
 * Since E = 0 in a good conductor, charges must reside on the surface.
 * These surface charges will produce an E field normal to the surface, with $\vec{E_n} = \frac{\sigma}{\epsilon_0}\hat{n}$.
@@ -156,7 +158,7 @@ $$\oint_{cavity} \vec{E}\_{cavity} \cdot d\vec{l} = 0 \implies \vec{E}\_{cavity}
 
 **Takeaway:** There's zero electric field inside the conductor because of the cancellation from the induced field. Since $\vec{E} = -\vec{\nabla}V$ (E field is the derivative of V), this is why the voltage stays the same at the same node.
 
-## Capacitance
+## 8. Capacitance
 
 ![Figure7](./image/Figure7.png)
 
@@ -187,11 +189,11 @@ $C = \frac{Q}{V_o} = \frac{\epsilon_0 A\sigma}{d\sigma} = \epsilon_0\frac{A}{d}$
 
 **Takeaway**: Capacitance is the ratio between charge and applied voltage. It depends on the space between the plates ($\epsilon$) and the geometry (A and d) of the plates.
 
-## Dielectric Material
+## 9. Dielectric Material
 * In metals (good conductors), electrons are free and mobile.
 * In insulators (dielectric) electrons are not free and mobile.
     * However, the outer electron could be pulled away and be modeled by an electric dipole with the proton.
-    * The dipole produces E field pointing in the opposite direction as the initial E field.
+    * The dipole produces an E field pointing in the opposite direction as the initial E field.
     * This dipole field is approximately proportional to the E field in the case of a **linear dielectric**.
     * To find the E field inside a dielectric material, we must factor in the dipole field.
 
@@ -202,7 +204,7 @@ $$\approx \epsilon \vec{E}$$
 
 Practically, we solve dielectric problems by replacing the permittivity of free space with the permittivity.
 
-## Electric Field at the Boundary: Dielectric
+## 10. Electric Field at the Boundary: Dielectric
 
 On the boundary of two dielectric materials, the E field has a tangential and normal component.
 
@@ -224,14 +226,14 @@ $$D_{1n} - D_{2n} = \rho_s$$
 
 $$\epsilon_1 E_{1n} - \epsilon_2 E_{2n} = \rho_s$$
 
-## Summary
+## 11. Summary
 Maxwell's Equation for Electrostatics
 | Law | Integral Form | Differential Form |
 |----| -----| -----|
 | Gauss' Law | $\oint_s \vec{E} \cdot d\vec{A} = \frac{Q}{\epsilon_0}$ | $\vec{\nabla} \cdot \vec{E} = \frac{\rho(\vec{r})}{\epsilon_0}$ |
 | Work Done | $\oint_c \vec{E} \cdot d\vec{l} = 0$ | $\vec{\nabla} \times \vec{E} = 0$ |
 
-## Questions
+## 12. Questions
 * Can we apply Gauss' Law on a line or sheet that is not infinite in length?
 * Why do we always assume an infinite sheet of **uniform** charge?
 * What exactly is the Electric Flux Density

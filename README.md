@@ -4,14 +4,14 @@ This repository contains lecture notes of the EEC130 series from the University 
 
 ## Course Content
 
-**EEC130A**
+### EEC130A
 
 * [Transmission Line Basics](./lecture/Transmission_Line.md)
 * [Electrostatics](./lecture/Electrostatics.md)
 * [Magnetostatics](./lecture/Magnetostatics.md)
 * [Electrodynamics and Maxwell's Equations](./lecture/Electrodynamics.md)
 
-**EEC130B (Currently Updating)**
+### EEC130B
 
 * [Electromagnetic Plane Wave Propagation](./lecture/Electromagnetic_Wave_Propagation.md)
 * [Reflection and Transmission](./lecture/Reflection_and_transmission.md)

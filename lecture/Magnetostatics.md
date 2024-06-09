@@ -1,6 +1,6 @@
 # Magnetostatics
 
-## Current Density
+## 1. Current Density
 
 We are interested in how much charge crosses the plane P in time $\Delta t$
 
@@ -26,7 +26,7 @@ $$\vec{\nabla} \cdot \vec{J} + \frac{d\rho_v}{dt} = 0$$
 
 Current density diverging from a point is the negative of the change in charge density at a point.
 
-## Magnetic Field and Force
+## 2. Magnetic Field and Force
 Moving charges produce magnetic fields and those fields exert forces on moving charges.
 
 The force exerted by the B field on a moving charge:
@@ -45,7 +45,7 @@ Since the force points to a perpendicular direction, an electric charge moving t
 
 The force is always perpendicular to the direction that the charge is moving toward.
 
-## Biot-Savart Law
+## 3. Biot-Savart Law
 
 Similar to the superposition of the E field, we can find the total E field by adding individual contributions of the B field.
 
@@ -65,7 +65,7 @@ Note that when r << L or when L approaches infinity,
 
 $$\vec{B}_p = \frac{\mu_0 I}{2\pi r} \hat{\phi}$$
 
-## Ampère's Laws
+## 4. Ampère's Laws
 
 **Applicable only on Infinite cylinders or lines of current.**
 
@@ -84,14 +84,13 @@ $$\oint_c \vec{B} \cdot d\vec{l} = \mu_0 i \implies \int_S \Big( \vec{\nabla \ti
 
 $$\implies \vec{\nabla} \times \vec{B} = \mu_0 \vec{J}$$
 
-## Magnetic Flux
+## 5. Inductor
+### Magnetic Flux
 **Magnetic Flux:** magnetic fields flowing through an open surface S that has a boundary.
 
 $$\phi_B = \int_S \vec{B} \cdot d\vec{A}$$
 
-## Inductance
-
-**Inductance**
+### Inductance
 
 By applying the Biot-Savart Law on a closed loop to get the B field, we get the magnetic flux through the loop as:
 
@@ -107,7 +106,7 @@ with N as the number of loop and L be the **inductance** of the loop
 
 By applying current to the wire, we produce magnetic flux, and vice versa. This is analogous to the capacitor, where the charge in the plate is proportional to the applied voltage and vice versa.
 
-## Infinite Sheet of Current
+### Infinite Sheet of Current
 
 Given an infinite sheet of current in the x-y plane with current flowing in the +x direction with a linear density of K, find the B field everywhere.
 
@@ -135,7 +134,7 @@ $$
 $$
 
 
-## Solenoid
+### Solenoid
 
 ![Figure13](./image/Figure13.png)
 
@@ -151,7 +150,7 @@ $$N\phi_B = \int \vec{B} \cdot d\vec{A} = |\vec{B}| \int dA = |\vec{B}|A$$
 
 $$L' = \frac{N\phi_B}{Il} = \frac{\mu_0 N^2}{l^2}A$$
 
-## Magnetic Material
+## 6. Magnetic Material
 
 Applying B field to materials causes the material to form magnetized domains that could be thought of a bar magnet with north and south pole.
 
@@ -180,7 +179,7 @@ $$\vec{\nabla} \times \vec{B} = \vec{\nabla} \times (\mu_0 \vec{H} + \mu_0 \vec{
 
 we could swap the free space permeability with the permeability of the material that we want to find the B field in.
 
-## Summary
+## 7. Summary
 
 * **Bio-Savart Law**: Go from current to B field.
 * **Ampere's Law**: For symmetric currents with an infinite cylinder or line of current.
