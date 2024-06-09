@@ -85,7 +85,9 @@ $$\frac{\sin \space \theta_t}{\sin \space \theta_i} = \frac{n_1}{n_2}$$
 
 When the transmission angle $\theta_t$ is undefined, we have a total internal reflection.
 
-### Perpendicular Polarization
+### Transverse Electric Reflection and Transmission
+
+The following reflection and transmission coefficient applies when the E field of the EM wave is perpendicular to the reflection plane (out of the page).
 
 $$\Gamma_{\perp} = \frac{\eta_2 \space \cos\space \theta_i - \eta_1 \space \cos \space \theta_t}{\eta_2 \space \cos \space \theta_i + \eta_1 \space \cos \space \theta_t}$$
 
@@ -95,7 +97,9 @@ The reflection and transmission coefficients are related by
 
 $$\tau_{\perp} = 1 + \Gamma_{\perp}$$
 
-### Parallel Polarization
+### Transverse Magnetic Reflection and Transmission
+
+The following reflection and transmission coefficient applies when the E field of the EM wave is parallel to the reflection plane (in the page).
 
 $$\Gamma_{\parallel} = \frac{\eta_2 \space \cos\space \theta_t - \eta_1 \space \cos \space \theta_i}{\eta_2 \space \cos \space \theta_t + \eta_1 \space \cos \space \theta_i}$$
 
