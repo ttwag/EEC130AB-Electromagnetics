@@ -23,7 +23,7 @@ This repository contains lecture notes of the EEC130 series from the University 
 * Professor Putnam is a great lecturer. He focuses on developing a deep understanding of the concept.
 * EEC130A was more conceptual and similar to Intro E&M in an undergraduate physics class. However, it also includes the study of the transmission line, which is interesting because we've never thought of a circuit that would have a signal delay.
 * EEC130B was more formula-heavy because we studied the solutions to wave PDEs derived from Maxwell's Equations. We also studied waveguides, but it also involved lots of wave solutions and facts to memorize.
-* Overall, I'll give 130A a 5/5 and 130B a 3/5.
+* Overall, **I'll give 130A a 5/5 and 130B a 3/5**.
 
 ## Reference
 * This is the note that I took while taking Professor **William Putnam**'s EEC130AB courses at UC Davis in the Winter/Spring Quarter of 2024. 
